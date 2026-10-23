@@ -52,8 +52,9 @@
     {
       "brand": "코콤",
       "model": "KHN-893H",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "RF447 연동 가능 모델로 판매처 호환 목록에 등재되어 있습니다. 단지별 배선·설정에 따라 설치가 불가능할 수 있으므로 현장 확인이 필요합니다.",
+      "source": "https://m.11st.co.kr/products/ma/7707190971"
     },
     {
       "brand": "코콤",
