@@ -390,13 +390,42 @@
       "brand": "현대통신",
       "model": "DMHNT-4105Y-W",
       "status": "conditional",
-      "note": "현장 제보상 일반 환경 연동 사례 있으나 자이(Xi), 포스코 건설 아파트는 연동 불가 제보. 시공사 및 현장 확인 필수.",
+      "note": "설치기사 현장 의견: 일반 아파트에서는 RF447 연동 가능, 자이(Xi) 및 포스코건설 시공 아파트에서는 연동 불가. 이는 공식 제조사 검증 결과가 아닌 기사 경험 기반 제보이며, 실제 현장 환경과 모듈 확인이 필요합니다.",
       "siteReports": [
         {
           "site": "동탄역 경남아너스빌",
           "status": "compatible",
           "sourceType": "사용자 전달 현장 설치 가능 사례",
           "reportedOn": "2026-10-26"
+        }
+      ],
+      "sourceType": "설치기사 현장 의견",
+      "reportedOn": "2026-10-26",
+      "apartmentRules": [
+        {
+          "builders": [
+            "자이",
+            "Xi",
+            "GS건설"
+          ],
+          "status": "incompatible_reported",
+          "note": "자이 아파트 RF447 연동 불가 (설치기사 의견)"
+        },
+        {
+          "builders": [
+            "포스코",
+            "포스코건설",
+            "포스코이앤씨",
+            "POSCO",
+            "더샵"
+          ],
+          "status": "incompatible_reported",
+          "note": "포스코건설 시공 아파트 RF447 연동 불가 (설치기사 의견)"
+        },
+        {
+          "category": "일반 아파트",
+          "status": "compatible_reported",
+          "note": "일반 아파트 RF447 연동 가능 (설치기사 의견)"
         }
       ]
     },
