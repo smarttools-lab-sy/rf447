@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-26",
   "records": [
     {
       "brand": "코콤",
@@ -391,6 +391,15 @@
       "model": "DMHNT-4105Y-W",
       "status": "conditional",
       "note": "현장 제보상 일반 환경 연동 사례 있으나 자이(Xi), 포스코 건설 아파트는 연동 불가 제보. 시공사 및 현장 확인 필수."
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-Q100LT",
+      "status": "site_report",
+      "note": "용인 롯데캐슬 클라시에에서 RF447 연동 가능 확인 제보. 다른 단지에 동일 모델이 설치되어 있어도 연동 가능 여부는 별도 확인 필요.",
+      "site": "용인 롯데캐슬 클라시에",
+      "reportedOn": "2026-10-26",
+      "sourceType": "현장 제보"
     }
   ],
   "manufacturerNotes": [
