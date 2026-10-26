@@ -427,7 +427,11 @@
           "status": "compatible_reported",
           "note": "일반 아파트 RF447 연동 가능 (설치기사 의견)"
         }
-      ]
+      ],
+      "aliases": [
+        "DMHNT-4105Y"
+      ],
+      "aliasNote": "끝자리 -W는 화이트 색상 구분이며, DMHNT-4105Y와 DMHNT-4105Y-W는 내부 구성이 동일한 라인업이라는 사용자 전달 정보. 색상 구분 외 모델별 특이사항은 현장 확인."
     },
     {
       "brand": "코콤",
