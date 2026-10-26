@@ -400,6 +400,14 @@
       "site": "용인 롯데캐슬 클라시에",
       "reportedOn": "2026-10-26",
       "sourceType": "현장 제보"
+    },
+    {
+      "brand": "바하",
+      "model": "BHWP-2001A",
+      "status": "aged_site_inspection",
+      "note": "오래된 월패드로 아파트별 RF447 연동 성공·실패 사례가 모두 있다는 현장 제보. 월패드 내부 전선 노후화·손상 가능성이 있어 다수 설치기사가 작업을 기피한다고 전달됨. 내부 배선의 실제 손상 여부는 확인되지 않았으며 현장 점검 전 설치 가능 여부 판단 불가.",
+      "sourceType": "현장 기사 경험 제보",
+      "reportedOn": "2026-10-26"
     }
   ],
   "manufacturerNotes": [
