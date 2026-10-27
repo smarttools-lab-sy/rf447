@@ -131,84 +131,108 @@
     {
       "brand": "현대통신",
       "model": "DWP-1004HT",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "현대통신",
       "model": "HAF-R1071",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "현대통신",
       "model": "HNF-14102 Series",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "현대통신",
       "model": "HAS-R1041B",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "현대통신",
       "model": "HAS-R2041S",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "현대통신",
       "model": "HAS-R2071A",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "현대통신",
       "model": "HAS-R2071S",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "현대통신",
       "model": "HNT-179",
       "status": "listed_compatible",
-      "note": "사용자 제공 아카라 K100 월패드 RF447 모듈 설치·구매 안내 이미지의 지원 모델 목록에 등재. 안내 자료에는 '2선 접점방식 또는 릴레이 접점방식으로 연동 가능'이라고 명시됨. 실제 연동은 단지별 배선·모듈·설치 환경 확인 필요.",
-      "sourceType": "사용자 제공 아카라 K100 안내 이미지",
-      "verifiedOn": "2026-10-27"
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)",
+      "verifiedOn": "2026-10-27",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad"
     },
     {
       "brand": "현대통신",
       "model": "HNT-3079",
       "status": "listed_compatible",
-      "note": "사용자 제공 아카라 K100 월패드 RF447 모듈 설치·구매 안내 이미지의 지원 모델 목록에 등재. 안내 자료에는 '2선 접점방식 또는 릴레이 접점방식으로 연동 가능'이라고 명시됨. 실제 연동은 단지별 배선·모듈·설치 환경 확인 필요.",
-      "sourceType": "사용자 제공 아카라 K100 안내 이미지",
-      "verifiedOn": "2026-10-27"
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 현대통신은 배선 상황에 따른 차이가 있어 사전 확인 권장.",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)",
+      "verifiedOn": "2026-10-27",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad"
     },
     {
       "brand": "직방/삼성",
       "model": "SHT-3527",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "직방/삼성",
       "model": "SHT-3625",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "직방/삼성",
       "model": "SHT-8820",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "직방/삼성",
       "model": "SHN-8207",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "직방/삼성",
@@ -219,176 +243,232 @@
     {
       "brand": "경동나비엔",
       "model": "NHA-0475",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-0792",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-0793",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-0794",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-0796",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-0797V",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-07A2",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-1022V",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-1025V",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHA-1311",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHN-1031",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHN-1033",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHN-1041",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NHN-1051",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NVP-1032",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "NVP-1034",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "SDP-310",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-1010",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-1010C",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-460",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-460HK",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-471HK",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-472",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-734HK/BK",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-754BK",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHA-T100",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "경동나비엔",
       "model": "UHN-1020",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "listed_compatible",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
     },
     {
       "brand": "미확인",
       "model": "EHW-1051",
       "status": "incompatible",
-      "note": "사용자 확인: 연동 불가. 공식 미지원 안내도 전달됨."
+      "note": "공식 K100 안내에 설치 불가능 모델로 명시됨.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad"
     },
     {
       "brand": "미확인",
       "model": "TSH-1120",
       "status": "incompatible",
-      "note": "이전 자료상 미지원. 근거 재확인 필요."
+      "note": "공식 K100 안내에 설치 불가능 모델로 명시됨.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad"
     },
     {
       "brand": "코콤",
