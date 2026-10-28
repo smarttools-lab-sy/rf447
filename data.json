@@ -935,6 +935,76 @@
       "status": "catalog_unverified",
       "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.",
       "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-U100DW",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "DWP-2000KC",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-T130T9F",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-S701",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-T100TP",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "KSM-W240M(CW)",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CAV-1020MGX+",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CAV-70HS",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CAV-705U",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CAV-705UW",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
+      "sourceType": "공개 제품 자료"
     }
   ],
   "manufacturerNotes": [
