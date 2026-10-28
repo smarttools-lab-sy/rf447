@@ -914,6 +914,27 @@
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
       "verifiedOn": "2026-10-28"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-10B",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-783",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.",
+      "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-590CL",
+      "status": "catalog_unverified",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.",
+      "sourceType": "공개 제품 자료"
     }
   ],
   "manufacturerNotes": [
