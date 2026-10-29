@@ -505,8 +505,9 @@
       "brand": "미확인",
       "model": "EHW-1051",
       "status": "incompatible",
-      "note": "공식 K100 안내에 설치 불가능 모델로 명시됨.",
-      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad"
+      "note": "아카라 K100 공식 안내상 일반 설치 불가 모델. 평택센트럴자이3단지에서 숙련 설치기사가 별도 배선을 구성해 연동한 특수 시공 성공 사례가 있으나, 일반적인 RF447 설치 가능 모델로 취급하면 안 됨.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "specialInstallation": true
     },
     {
       "brand": "미확인",
@@ -1239,11 +1240,11 @@
       "apartment": "평택센트럴자이3단지",
       "doorlock": "아카라 도어락 (모델 미확인)",
       "wallpadBrand": null,
-      "wallpadModel": null,
-      "assessment": "site_report",
-      "evidence": "인테리어 공사 과정에서 아카라 도어락과 월패드의 연동을 실제 완료했다는 사용자 확인 사례. 자이 단지 중 연동 성공 예외 사례이며, 월패드 및 도어락의 정확한 모델명은 미확인.",
+      "wallpadModel": "EHW-1051",
+      "assessment": "special_installation",
+      "evidence": "공식 안내상 일반 설치 불가인 EHW-1051을 숙련 설치기사가 별도 배선을 구성하여 아카라 도어락과 연동한 특수 시공 성공 사례. 일반 설치기사의 표준 RF447 설치 가능 사례가 아니며, 특수 작업의 안전성·적법성·유지보수 가능성 등 별도 검토 필요.",
       "source": "https://butree.com/property/apt/complex/50103",
-      "sourceType": "사용자 확인 현장 시공 완료 사례",
+      "sourceType": "사용자 제공 설치기사 현장 특수 시공 사례",
       "verifiedOn": "2026-10-29"
     }
   ]
