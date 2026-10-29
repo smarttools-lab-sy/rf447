@@ -1242,9 +1242,9 @@
       "wallpadBrand": null,
       "wallpadModel": null,
       "assessment": "site_report",
-      "evidence": "자이(Xi) 단지이지만 RF447을 통한 아카라 도어락 연동이 가능한 예외 단지라는 사용자 제공 현장 정보. 월패드 모델명과 도어락 모델명은 미확인.",
+      "evidence": "인테리어 공사 과정에서 아카라 도어락과 월패드의 연동을 실제 완료했다는 사용자 확인 사례. 자이 단지 중 연동 성공 예외 사례이며, 월패드 및 도어락의 정확한 모델명은 미확인.",
       "source": "https://butree.com/property/apt/complex/50103",
-      "sourceType": "사용자 제공 연동 가능 정보 / 주소·단지명 공개 자료 확인",
+      "sourceType": "사용자 확인 현장 시공 완료 사례",
       "verifiedOn": "2026-10-29"
     }
   ]
