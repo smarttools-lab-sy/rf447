@@ -1182,5 +1182,31 @@
       "brandSource": "https://bestinmall.co.kr/service/company.php",
       "supplySource": "https://kind.krx.co.kr/external/2025/03/18/001609/20250318007498/11011.htm"
     }
+  ],
+  "fieldCases": [
+    {
+      "apartment": "화성 비봉 금강펜트리움",
+      "doorlock": "아카라 K100",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "설치업체 '1등 고수' 시공 포트폴리오에서 K100 교체 및 월패드 무선 연동 시공을 명시. 월패드 모델명은 확인되지 않아 특정 모델의 호환 판정에는 반영하지 않음.",
+      "source": "https://soomgo.com/portfolio/detail/6a9e08ca644e6e17fdbf143b?from=portfolio_detail",
+      "sourceType": "숨고 설치업체 시공 포트폴리오",
+      "publishedOn": "2026-09-07",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "apartment": null,
+      "doorlock": "아카라 K100",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "오늘의집 실구매자 Jieun323 후기에서 '월패드 연동도 가능해서 진행했어요'라고 명시. 아파트 및 월패드 모델명 미확인; 작동 테스트 직접 확인은 아님.",
+      "source": "https://www.coocha.co.kr/gateway/goPage?cid=&curRank=3&data=MTk1NDM3NzIwOQ&keyword=%EC%82%BC%EC%84%B1+%EB%8F%84%EC%96%B4%EB%9D%BD+%EC%A7%80%EB%AC%B8&scid=2300&sid=ohounas",
+      "sourceType": "오늘의집 구매후기 검색 노출",
+      "publishedOn": "2026-09-17",
+      "verifiedOn": "2026-10-29"
+    }
   ]
 }
