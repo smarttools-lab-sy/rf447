@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "records": [
     {
       "brand": "코콤",
@@ -1005,6 +1005,123 @@
       "status": "catalog_unverified",
       "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
       "sourceType": "공개 제품 자료"
+    },
+    {
+      "brand": "현대통신",
+      "model": "KHHN-2130",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HNF-I7133",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HNT-4105",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://irehomenet.kr/product/list.html?cate_no=42&page=1&sort_method=4",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HNF-H1101",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://irehomenet.kr/product/list.html?cate_no=42&page=1&sort_method=4",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HNF-R2073",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://irehomenet.kr/product/list.html?cate_no=42&page=1&sort_method=4",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CDP-1020YX",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "SNP920-5BW",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://www.kdnavien.co.kr/ko/pr/press-release/26993",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "SDP710-4B",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://nithome.co.kr/",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "NHA-1026",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://nithome.co.kr/",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-8820XM",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://nithome.co.kr/",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-NA500",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://irehomenet.kr/product/list.html?cate_no=42&page=1&sort_method=4",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHN-8710",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://m.auction.co.kr/n/list?category=07730000&f=pp%3Assgmall&s=4",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSW-2200",
+      "status": "catalog_unverified",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
+      "sourceType": "공개 제품·유통 자료",
+      "verifiedOn": "2026-10-29"
     }
   ],
   "manufacturerNotes": [
