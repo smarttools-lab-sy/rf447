@@ -1122,6 +1122,14 @@
       "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
       "sourceType": "공개 제품·유통 자료",
       "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CDP-1020PB",
+      "status": "conditional",
+      "note": "일반 사양은 RF447 아카라 도어락 연동 가능하다는 사용자 현장 정보. 단, 방배 롯데캐슬 아르떼 공급 전용 사양은 연동 불가. 다른 단지도 사양 확인 필요.",
+      "sourceType": "사용자 제공 현장 정보",
+      "verifiedOn": "2026-10-29"
     }
   ],
   "manufacturerNotes": [
@@ -1206,6 +1214,17 @@
       "source": "https://www.coocha.co.kr/gateway/goPage?cid=&curRank=3&data=MTk1NDM3NzIwOQ&keyword=%EC%82%BC%EC%84%B1+%EB%8F%84%EC%96%B4%EB%9D%BD+%EC%A7%80%EB%AC%B8&scid=2300&sid=ohounas",
       "sourceType": "오늘의집 구매후기 검색 노출",
       "publishedOn": "2026-09-17",
+      "verifiedOn": "2026-10-29"
+    },
+    {
+      "apartment": "방배 롯데캐슬 아르떼",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "코맥스",
+      "wallpadModel": "CDP-1020PB",
+      "assessment": "incompatible",
+      "evidence": "해당 아파트에는 CDP-1020PB의 아파트 전용 사양이 공급되어 RF447 연동 불가. 일반 CDP-1020PB 모델은 연동 가능하다는 사용자 제공 현장 정보.",
+      "source": null,
+      "sourceType": "사용자 제공 현장 정보",
       "verifiedOn": "2026-10-29"
     }
   ]
