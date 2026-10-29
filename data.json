@@ -1234,6 +1234,18 @@
       "source": null,
       "sourceType": "사용자 제공 현장 정보",
       "verifiedOn": "2026-10-29"
+    },
+    {
+      "apartment": "평택센트럴자이3단지",
+      "address": "경기도 평택시 상서재로 55",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "자이(Xi) 단지이지만 RF447을 통한 아카라 도어락 연동이 가능한 예외 단지라는 사용자 제공 현장 정보. 월패드 모델명과 도어락 모델명은 미확인.",
+      "source": "https://butree.com/property/apt/complex/50103",
+      "sourceType": "사용자 제공 연동 가능 정보 / 주소·단지명 공개 자료 확인",
+      "verifiedOn": "2026-10-29"
     }
   ]
 }
