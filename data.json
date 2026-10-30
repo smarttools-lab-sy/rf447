@@ -251,9 +251,11 @@
       "brand": "직방/삼성",
       "model": "SHT-3527",
       "status": "listed_compatible",
-      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요.",
+      "note": "공식 K100 월패드 호환 목록에 등재. 모델명만으로 설치를 보장하지 않으며 현장 배선 및 접점 방식 확인 필요. 실제 설치업체 아이홈넷의 2026-01-02 시공 후기에서 아카라 K100과 해당 인터폰 간 무선 연동 완료를 명시. 현장별 사양 차이 확인 필요.",
       "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
-      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)"
+      "sourceType": "아카라 K100 공식 호환 목록 (2025-01)",
+      "fieldEvidenceUrl": "https://eyehomenet.tistory.com/m/456",
+      "fieldEvidenceType": "설치업체 실제 연동 완료 시공 후기"
     },
     {
       "brand": "직방/삼성",
@@ -1271,6 +1273,18 @@
       "source": null,
       "sourceType": "사용자 직접 전달 설치기사 현장 연동 성공 확인",
       "verifiedOn": "2026-10-29"
+    },
+    {
+      "apartment": "안양 관악부영아파트",
+      "doorlock": "아카라 K100",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "2026-04-01 게시 시공 후기에서 '비디오폰으로 도어락을 열어줄 수 있도록 무선 연동 작업도 같이 해드렸습니다'라고 설명. 검색 보존본을 통한 확인이며 원문 직접 열람 및 월패드 모델 확인은 미완료. 단지 단위 성공 사례로만 취급.",
+      "source": "https://www.keyzard.cc/jongin11118/nb/224136465323",
+      "sourceType": "네이버 블로그 검색 보존본 (시공 후기)",
+      "publishedOn": "2026-04-01",
+      "verifiedOn": "2026-10-30"
     }
   ]
 }
