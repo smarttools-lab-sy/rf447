@@ -1285,6 +1285,17 @@
       "sourceType": "네이버 블로그 검색 보존본 (시공 후기)",
       "publishedOn": "2026-04-01",
       "verifiedOn": "2026-10-30"
+    },
+    {
+      "apartment": "경기 성남시 분당구 이매동 아름4단지두산삼호아파트",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "compatible",
+      "evidence": "2026-10-29 설치기사 현장에서 아카라 도어락과 월패드 실제 연동 완료 확인. 월패드 제조사·모델명과 도어락 모델 미확인. 해당 현장 성공 사례이며 단지 전체 호환을 보장하지 않음.",
+      "source": null,
+      "sourceType": "사용자 직접 전달 설치기사 현장 연동 성공 확인",
+      "verifiedOn": "2026-10-29"
     }
   ]
 }
