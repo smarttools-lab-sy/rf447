@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-11-02",
   "records": [
     {
       "brand": "코콤",
@@ -1296,6 +1296,17 @@
       "source": null,
       "sourceType": "사용자 직접 전달 설치기사 현장 연동 성공 확인",
       "verifiedOn": "2026-10-29"
+    },
+    {
+      "apartment": "경기 의정부시 민락동 민락2지구18단지호반베르디움",
+      "doorlock": "아카라 K100",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "compatible",
+      "evidence": "2026-11-02 사용자 전달: 해당 단지에 아카라 K100 설치 후 설치기사가 월패드 연동 완료를 확인함. 월패드 제조사·모델명 미확인. 단지 내 실제 설치 성공 사례이며 다른 세대나 모델의 호환을 보장하지 않음.",
+      "source": null,
+      "sourceType": "사용자 직접 전달 설치기사 현장 연동 성공 확인",
+      "verifiedOn": "2026-11-02"
     }
   ]
 }
