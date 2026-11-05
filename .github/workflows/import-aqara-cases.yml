@@ -1,0 +1,33 @@
+name: Import Aqara installation successes
+on:
+  schedule:
+    - cron: '20 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: aqara-wallpad-import
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import successful completion cases
+        env:
+          AQARA_WALLPAD_API_KEY: ${{ secrets.AQARA_WALLPAD_API_KEY }}
+        run: python scripts/import_aqara_cases.py
+      - name: Commit data changes
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "No new cases"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "Import new Aqara installation success cases"
+          git push
