@@ -17,8 +17,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Import successful completion cases
-        env:
-          AQARA_WALLPAD_API_KEY: ${{ secrets.AQARA_WALLPAD_API_KEY }}
         run: python scripts/import_aqara_cases.py
       - name: Commit data changes
         run: |
