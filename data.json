@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-05",
   "records": [
     {
       "brand": "코콤",
@@ -125,8 +125,10 @@
     {
       "brand": "코맥스",
       "model": "CAV-700B",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "installer_possible",
+      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요.\n기사 미팅 1차 답변(2026-11-03): 가능. CAV-700MB와 색상 차이라는 기사 의견. 단지별 사양 확인 필요.",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
@@ -284,8 +286,10 @@
     {
       "brand": "직방/삼성",
       "model": "SHN-8510",
-      "status": "list_unverified",
-      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요."
+      "status": "aged_site_inspection",
+      "note": "이전 정리된 공식 목록 후보. 원문 재대조 전이므로 확정 호환으로 판단하지 마세요.\n기사 미팅 1차 답변(2026-11-03): 불가. 모델 자체는 연동 가능하다는 기사 의견이나 노후 부식 우려로 시공 비권장. 기술적 불가 판정과 구분.",
+      "installerFirstResponse": "불가",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "경동나비엔",
@@ -507,28 +511,34 @@
       "brand": "미확인",
       "model": "EHW-1051",
       "status": "incompatible",
-      "note": "아카라 K100 공식 안내상 일반 설치 불가 모델. 평택센트럴자이3단지에서 숙련 설치기사가 별도 배선을 구성해 연동한 특수 시공 성공 사례가 있으나, 일반적인 RF447 설치 가능 모델로 취급하면 안 됨.",
+      "note": "아카라 K100 공식 안내상 일반 설치 불가 모델. 평택센트럴자이3단지에서 숙련 설치기사가 별도 배선을 구성해 연동한 특수 시공 성공 사례가 있으나, 일반적인 RF447 설치 가능 모델로 취급하면 안 됨.\n기사 미팅 1차 답변(2026-11-03): 불가. 일반 설치 불가. 평택센트럴자이3단지는 이지빌 전용 하네스 및 별도 배선으로 성공한 특수 예외 사례.",
       "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
-      "specialInstallation": true
+      "specialInstallation": true,
+      "installerFirstResponse": "불가",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "미확인",
       "model": "TSH-1120",
       "status": "incompatible",
-      "note": "공식 K100 안내에 설치 불가능 모델로 명시됨.",
-      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad"
+      "note": "공식 K100 안내에 설치 불가능 모델로 명시됨.\n기사 미팅 1차 답변(2026-11-03): 불가.",
+      "source": "https://aqaralife.gitbook.io/manual/doorlock/k100/wallpad",
+      "installerFirstResponse": "불가",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-873A",
       "status": "incompatible",
-      "note": "판매자 Q&A상 연동 불가로 전달됨. 근거 재확인 필요."
+      "note": "판매자 Q&A상 연동 불가로 전달됨. 근거 재확인 필요.\n기사 미팅 1차 답변(2026-11-03): 모름. 기사 답변은 모름. 다만 모델 자체는 가능하나 노후화로 시공이 어렵다는 의견이 있어 기존 불가 근거 재확인 필요.",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "현대통신",
       "model": "DMHNT-4105Y-W",
       "status": "conditional",
-      "note": "설치기사 현장 의견: 일반 아파트에서는 RF447 연동 가능, 자이(Xi) 및 포스코건설 시공 아파트에서는 연동 불가. 이는 공식 제조사 검증 결과가 아닌 기사 경험 기반 제보이며, 실제 현장 환경과 모듈 확인이 필요합니다.",
+      "note": "설치기사 현장 의견: 일반 아파트에서는 RF447 연동 가능, 자이(Xi) 및 포스코건설 시공 아파트에서는 연동 불가. 이는 공식 제조사 검증 결과가 아닌 기사 경험 기반 제보이며, 실제 현장 환경과 모듈 확인이 필요합니다.\n기사 미팅 1차 답변(2026-11-03): 아파트별 상이. 일반 아파트 가능 사례, 자이·포스코 단지 불가 사례로 단지별 확인 필요.",
       "siteReports": [
         {
           "site": "동탄역 경남아너스빌",
@@ -569,7 +579,9 @@
       "aliases": [
         "DMHNT-4105Y"
       ],
-      "aliasNote": "끝자리 -W는 화이트 색상 구분이며, DMHNT-4105Y와 DMHNT-4105Y-W는 내부 구성이 동일한 라인업이라는 사용자 전달 정보. 색상 구분 외 모델별 특이사항은 현장 확인."
+      "aliasNote": "끝자리 -W는 화이트 색상 구분이며, DMHNT-4105Y와 DMHNT-4105Y-W는 내부 구성이 동일한 라인업이라는 사용자 전달 정보. 색상 구분 외 모델별 특이사항은 현장 확인.",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
@@ -584,9 +596,11 @@
       "brand": "바하",
       "model": "BHWP-2001A",
       "status": "aged_site_inspection",
-      "note": "오래된 월패드로 아파트별 RF447 연동 성공·실패 사례가 모두 있다는 현장 제보. 월패드 내부 전선 노후화·손상 가능성이 있어 다수 설치기사가 작업을 기피한다고 전달됨. 내부 배선의 실제 손상 여부는 확인되지 않았으며 현장 점검 전 설치 가능 여부 판단 불가.",
+      "note": "오래된 월패드로 아파트별 RF447 연동 성공·실패 사례가 모두 있다는 현장 제보. 월패드 내부 전선 노후화·손상 가능성이 있어 다수 설치기사가 작업을 기피한다고 전달됨. 내부 배선의 실제 손상 여부는 확인되지 않았으며 현장 점검 전 설치 가능 여부 판단 불가.\n기사 미팅 1차 답변(2026-11-03): 불가. 노후 배선으로 시공 비권장. 기존 성공·실패 사례가 모두 있으므로 일반적인 연동 불가 의견만으로 예외 사례를 삭제하지 않음.",
       "sourceType": "현장 기사 경험 제보",
-      "reportedOn": "2026-10-26"
+      "reportedOn": "2026-10-26",
+      "installerFirstResponse": "불가",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
@@ -687,363 +701,449 @@
     {
       "brand": "코콤",
       "model": "KHN-380A",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-W140TG",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-T130T9",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-T100T9",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-U100TYW",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-T100M9",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-V100JA",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-U100TYN",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-V70JA",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-S100CL(V1)",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-T100TY",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-S100JA",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-Q100HG",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KCV-U701JA",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-R100AW",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-R100AT",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KCV-S701JA",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://kocom.co.kr/product/result.php?schText=%EC%9B%94%ED%8C%A8%EB%93%9C",
       "sourceType": "코콤 제조사 월패드 제품 목록",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-1000QGX_KT",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-1001QGX_KT",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-70QGX_KT",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CPV-70QGX",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-70QGX",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-1000YD",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-1081Q",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CDP-1020IB",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CDP-1000Y",
-      "status": "catalog_unverified",
-      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.",
+      "status": "installer_possible",
+      "note": "제조사 제품 자료 또는 제품 안내에서 모델명 확인. RF447 연동 여부는 이 모델에 대해 개별 검증되지 않았습니다. 최근 약 10년 이내 코콤·코맥스 월패드의 연동 사례가 많다는 설치기사 경험은 제조사 단위 참고 의견이며 이 모델의 출시연도나 호환성을 보장하지 않습니다. 배선·접점 방식 및 모듈 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://www.commax.com/index?lang=ko",
       "sourceType": "코맥스 제품 설명서·제품 안내·사업자료",
-      "verifiedOn": "2026-10-28"
+      "verifiedOn": "2026-10-28",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-10B",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-783",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-590CL",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 호환 여부와 출시연도는 미확인. 현장 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-U100DW",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "DWP-2000KC",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-T130T9F",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-S701",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KHN-T100TP",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코콤",
       "model": "KSM-W240M(CW)",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-1020MGX+",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-70HS",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-705U",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "코맥스",
       "model": "CAV-705UW",
-      "status": "catalog_unverified",
-      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.",
-      "sourceType": "공개 제품 자료"
+      "status": "installer_possible",
+      "note": "공개 제품 자료에서 모델명 확인. RF447 개별 호환성과 출시연도는 확인되지 않았습니다. 현장 배선·모듈 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "공개 제품 자료",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "현대통신",
       "model": "KHHN-2130",
-      "status": "catalog_unverified",
-      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "status": "conditional",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
       "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
       "sourceType": "공개 제품·유통 자료",
-      "verifiedOn": "2026-10-29"
+      "verifiedOn": "2026-10-29",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "현대통신",
       "model": "HNF-I7133",
-      "status": "catalog_unverified",
-      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "status": "conditional",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
       "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
       "sourceType": "공개 제품·유통 자료",
-      "verifiedOn": "2026-10-29"
+      "verifiedOn": "2026-10-29",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "현대통신",
       "model": "HNT-4105",
-      "status": "catalog_unverified",
-      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "status": "installer_possible",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://irehomenet.kr/product/list.html?cate_no=42&page=1&sort_method=4",
       "sourceType": "공개 제품·유통 자료",
-      "verifiedOn": "2026-10-29"
+      "verifiedOn": "2026-10-29",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "현대통신",
       "model": "HNF-H1101",
-      "status": "catalog_unverified",
-      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "status": "conditional",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
       "source": "https://irehomenet.kr/product/list.html?cate_no=42&page=1&sort_method=4",
       "sourceType": "공개 제품·유통 자료",
-      "verifiedOn": "2026-10-29"
+      "verifiedOn": "2026-10-29",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "현대통신",
@@ -1057,11 +1157,13 @@
     {
       "brand": "코맥스",
       "model": "CDP-1020YX",
-      "status": "catalog_unverified",
-      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.",
+      "status": "installer_possible",
+      "note": "공개 제품·유통 자료에서 모델명 확인. RF447 호환성 및 출시연도 미검증. 실제 월패드 모델 라벨 및 설치 환경 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 가능.",
       "source": "https://pontree.co.kr/shop/shopbrand.html?mcode=004&scode=001&type=X&xcode=022",
       "sourceType": "공개 제품·유통 자료",
-      "verifiedOn": "2026-10-29"
+      "verifiedOn": "2026-10-29",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "경동나비엔",
@@ -1130,9 +1232,11 @@
       "brand": "코맥스",
       "model": "CDP-1020PB",
       "status": "conditional",
-      "note": "일반 사양은 RF447 아카라 도어락 연동 가능하다는 사용자 현장 정보. 단, 방배 롯데캐슬 아르떼 공급 전용 사양은 연동 불가. 다른 단지도 사양 확인 필요.",
+      "note": "일반 사양은 RF447 아카라 도어락 연동 가능하다는 사용자 현장 정보. 단, 방배 롯데캐슬 아르떼 공급 전용 사양은 연동 불가. 다른 단지도 사양 확인 필요.\n기사 미팅 1차 답변(2026-11-03): 아파트별 상이. 일반 사양 가능, 방배 롯데캐슬 아르떼 전용 사양 불가.",
       "sourceType": "사용자 제공 현장 정보",
-      "verifiedOn": "2026-10-29"
+      "verifiedOn": "2026-10-29",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
     },
     {
       "brand": "삼성SDS",
@@ -1157,6 +1261,618 @@
       "note": "아카라 도어락 RF447 실제 연동 성공 사례가 있다는 사용자 전달 현장 정보. 아파트명 및 세부 시공 환경은 미확인. 단지별 배선·전용 사양에 따라 결과가 달라질 수 있으므로 설치 전 현장 확인 필요.",
       "sourceType": "사용자 전달 설치 성공 현장 정보 (아파트명 미확인)",
       "verifiedOn": "2026-10-29"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHP-HB700",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHP-HB801",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3517",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3615",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3727",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3737",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-NA500M/ZK",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HAS-R2071",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CNW-4100",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CNW-4120",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "NHN-1037",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "NHN-1035",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "SDP-320-6HW",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대HT",
+      "model": "HNT-3104",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-U100JAW",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-W140TG V2",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-Q100HD",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-V100JA ZB",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CDP-1020IS",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CSH-1020WB",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CSH-1020S",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CKV-1020ES",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CKV-1020FS",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CHM-2200",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CSH-1400V",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "NHN-1052",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "NHN-1055",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "경동나비엔",
+      "model": "NHN-1056",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3625AMK",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3625AMW",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KCV-X701IP",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KCV-YO43",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코맥스",
+      "model": "CAV-712MR",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3737AM",
+      "status": "installer_possible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 가능. 방·주방 등의 보조 확인용 월패드로 실제 도어락 연동 대상이 되는 경우는 드묾.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHN-8810LM",
+      "status": "aged_site_inspection",
+      "note": "기사 미팅 1차 답변(2026-11-03): 불가. 월패드 내부에 추가 커넥터가 있으면 연동 가능하다는 기사 의견. 커넥터 없는 기본 상태에서는 불가 의견.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "불가",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "자이전용모델",
+      "model": "PIHN-1004",
+      "status": "incompatible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 불가. 더샵그린포레 전용 월패드라는 기사 메모. 단지 전용 사양 확인 필요.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "불가",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHN-8810",
+      "status": "incompatible",
+      "note": "기사 미팅 1차 답변(2026-11-03): 불가.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "불가",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "베스틴/HDC랩스",
+      "model": "IHN-1010",
+      "status": "conditional",
+      "note": "기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "베스틴/HDC랩스",
+      "model": "IHN-2400",
+      "status": "conditional",
+      "note": "기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "베스틴/HDC랩스",
+      "model": "IHN-M1330",
+      "status": "conditional",
+      "note": "기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대HT",
+      "model": "DWHN-1000",
+      "status": "conditional",
+      "note": "기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대HT",
+      "model": "TAS-R107-1B",
+      "status": "conditional",
+      "note": "기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대HT",
+      "model": "HNS-R1103",
+      "status": "conditional",
+      "note": "기사 미팅 1차 답변(2026-11-03): 아파트별 상이.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "아파트별 상이",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHN-8820XM",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름. 추가 커넥터 필요 가능성. 정확한 모델의 성공 사례는 미확인.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHP-HA400",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHP-HA502",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HDHN-3000",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HDHN-4000",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대통신",
+      "model": "HNF-I4102",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대통신",
+      "model": "SEHN-1000",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CAW-6110",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSW-2210",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "TSW-2100",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSW-1300",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CAW-1110",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSW-3210",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSH-3100",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSW-1350",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSW-1260",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CHA-4720",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CHA-3720",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "DWP-3000",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "씨브이네트",
+      "model": "CSH-5100-WA",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대HT",
+      "model": "KHHN-2100",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-883A",
+      "status": "aged_site_inspection",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름. 노후 부식 우려로 시공 비권장 의견. 연동 불가 확정 아님.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "현대HT",
+      "model": "HNF-I6103",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "코콤",
+      "model": "KHN-983H",
+      "status": "aged_site_inspection",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름. 노후 부식 우려로 시공 비권장 의견. 연동 불가 확정 아님.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHN-8410XMG",
+      "status": "catalog_unverified",
+      "note": "기사 미팅 1차 답변(2026-11-03): 모름.",
+      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+      "installerFirstResponse": "모름",
+      "installerCheckedOn": "2026-11-03"
     }
   ],
   "manufacturerNotes": [
