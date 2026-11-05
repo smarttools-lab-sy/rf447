@@ -1,23 +1,17 @@
 #!/usr/bin/env python3
-"""Read-only Aqara wallpad case importer. Never publishes addresses or order IDs."""
+"""Public-only Aqara wallpad case importer. Never publishes addresses or order IDs."""
 import json, os, sys, urllib.request, datetime
 from pathlib import Path
 
 API = "https://www.aqaralife-service.kr/api/wallpad"
 DB = Path("data.json")
 def main():
-    key = os.environ.get("AQARA_WALLPAD_API_KEY", "").strip()
-    if not key:
-        print("Missing AQARA_WALLPAD_API_KEY secret; no changes.")
-        return 0
-    req = urllib.request.Request(API, headers={"Authorization": "Bearer " + key, "Accept":"application/json"})
+    req = urllib.request.Request(API, headers={"Accept":"application/json"})
     with urllib.request.urlopen(req, timeout=35) as response:
         payload = json.load(response)
     scope = payload.get("scope")
-    cases_preview = payload.get("cases")
-    print("Diagnostic: API request completed; secret present; scope=" + str(scope) + "; case_count=" + str(len(cases_preview) if isinstance(cases_preview, list) else "missing") + "; response_keys=" + ",".join(sorted(payload.keys())), flush=True)
-    if scope == "public":
-        raise RuntimeError("API returned public scope despite Authorization header. Check token validity, API auth behavior, and secret value. No data changed.")
+    if scope != "public":
+        raise RuntimeError("Unexpected API scope; refusing import")
     cases = payload.get("cases")
     if not isinstance(cases, list):
         raise RuntimeError("API cases missing; refusing changes")
@@ -25,15 +19,21 @@ def main():
     existing = db.setdefault("fieldCases", [])
     ids = {str(c.get("apiCaseId")) for c in existing if c.get("apiCaseId")}
     added = 0
+    eligible = 0
+    missing_site = 0
     for c in cases:
         if not isinstance(c, dict) or c.get("source") != "COMPLETION":
             continue
         result = c.get("result")
         if result not in ("SUCCESS", "SPECIAL"):
             continue
+        eligible += 1
         case_id = str(c.get("id") or "").strip()
         apt = str(c.get("siteName") or "").strip()
-        if not case_id or not apt or case_id in ids:
+        if not case_id or not apt:
+            missing_site += 1
+            continue
+        if case_id in ids:
             continue
         # Publish only site-level, non-personal data; never publish siteAddress,
         # installationOrderId, failReason, installer notes, or raw API records.
@@ -54,7 +54,7 @@ def main():
     if added:
         db["updated"] = datetime.date.today().isoformat()
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"API cases: {len(cases)}, new verified completion successes: {added}")
+    print(f"Public API cases: {len(cases)}, eligible COMPLETION successes: {eligible}, newly imported: {added}, missing ID/site: {missing_site}")
     return 0
 if __name__ == "__main__":
     try:
