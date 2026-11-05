@@ -13,8 +13,11 @@ def main():
     req = urllib.request.Request(API, headers={"Authorization": "Bearer " + key, "Accept":"application/json"})
     with urllib.request.urlopen(req, timeout=35) as response:
         payload = json.load(response)
-    if payload.get("scope") == "public":
-        raise RuntimeError("Authenticated full-scope API access required; refusing partial import")
+    scope = payload.get("scope")
+    cases_preview = payload.get("cases")
+    print("Diagnostic: API request completed; secret present; scope=" + str(scope) + "; case_count=" + str(len(cases_preview) if isinstance(cases_preview, list) else "missing") + "; response_keys=" + ",".join(sorted(payload.keys())), flush=True)
+    if scope == "public":
+        raise RuntimeError("API returned public scope despite Authorization header. Check token validity, API auth behavior, and secret value. No data changed.")
     cases = payload.get("cases")
     if not isinstance(cases, list):
         raise RuntimeError("API cases missing; refusing changes")
