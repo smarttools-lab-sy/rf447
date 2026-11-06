@@ -1,0 +1,21 @@
+name: Test RF447 Juso address lookup (read only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify Juso lookup without modifying DB
+        env:
+          JUSO_API_KEY: ${{ secrets.JUSO_API_KEY }}
+        run: python scripts/test_juso_lookup.py
