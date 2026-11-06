@@ -1,64 +1,92 @@
 #!/usr/bin/env python3
-"""Public-only Aqara wallpad case importer. Never publishes addresses or order IDs."""
-import json, os, sys, urllib.request, datetime
+"""Import approved RF447 completion successes without publishing private order data."""
+import datetime
+import hashlib
+import hmac
+import json
+import os
+import re
+import sys
+import urllib.request
 from pathlib import Path
 
 API = "https://www.aqaralife-service.kr/api/wallpad"
 DB = Path("data.json")
+
+def fingerprint(value, secret):
+    return hmac.new(secret.encode("utf-8"), str(value).encode("utf-8"), hashlib.sha256).hexdigest()
+
+def safe_apartment_name(value):
+    name = str(value or "").strip()
+    if not name or len(name) > 90 or re.search(r"\b\d{1,4}\s*(?:동|호)\b", name):
+        return None
+    # Reject strings that look like full street/parcel addresses or contact information.
+    if re.search(r"(?:로|길)\s*\d|\d{2,4}-\d{2,4}|@", name):
+        return None
+    return name
+
 def main():
-    req = urllib.request.Request(API, headers={"Accept":"application/json"})
+    key = os.environ.get("AQARA_WALLPAD_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError("Missing AQARA_WALLPAD_API_KEY GitHub secret")
+    req = urllib.request.Request(API, headers={
+        "Authorization": "Bearer " + key, "Accept": "application/json"
+    })
     with urllib.request.urlopen(req, timeout=35) as response:
         payload = json.load(response)
-    scope = payload.get("scope")
-    if scope != "public":
-        raise RuntimeError("Unexpected API scope; refusing import")
+    if not isinstance(payload, dict):
+        raise RuntimeError("Unexpected API response format")
     cases = payload.get("cases")
+    scope = payload.get("scope")
+    print(f"API scope: {scope!r}; total cases: {len(cases) if isinstance(cases, list) else 'missing'}", flush=True)
+    if scope == "public":
+        raise RuntimeError("API still returned public scope with Bearer key; no data imported. Check server authentication.")
     if not isinstance(cases, list):
-        raise RuntimeError("API cases missing; refusing changes")
+        raise RuntimeError("API cases missing; no data imported")
+
     db = json.loads(DB.read_text(encoding="utf-8"))
     existing = db.setdefault("fieldCases", [])
-    ids = {str(c.get("apiCaseId")) for c in existing if c.get("apiCaseId")}
-    added = 0
-    eligible = 0
-    missing_site = 0
+    # Keep compatibility with earlier imports, while using non-reversible IDs for new entries.
+    prior = {str(c.get("apiCaseId")) for c in existing if c.get("apiCaseId")}
+    hashes = {str(c.get("sourceCaseHash")) for c in existing if c.get("sourceCaseHash")}
+    added = eligible = skipped = 0
     for c in cases:
-        if not isinstance(c, dict) or c.get("source") != "COMPLETION":
-            continue
-        result = c.get("result")
-        if result not in ("SUCCESS", "SPECIAL"):
+        if not isinstance(c, dict) or c.get("source") != "COMPLETION" or c.get("result") != "SUCCESS":
             continue
         eligible += 1
-        case_id = str(c.get("id") or "").strip()
-        apt = str(c.get("siteName") or "").strip()
-        if not case_id or not apt:
-            missing_site += 1
+        case_id = c.get("id")
+        order_id = c.get("installationOrderId")
+        raw_id = order_id or case_id
+        apt = safe_apartment_name(c.get("siteName"))
+        if not raw_id or not apt:
+            skipped += 1
             continue
-        if case_id in ids:
+        case_hash = fingerprint(raw_id, key)
+        if case_hash in hashes or (case_id is not None and str(case_id) in prior):
             continue
-        # Publish only site-level, non-personal data; never publish siteAddress,
-        # installationOrderId, failReason, installer notes, or raw API records.
+        # siteAddress is used neither as a fallback nor published: it can identify a customer site.
         record = {
             "apartment": apt,
             "doorlock": "아카라 도어락 (모델 미확인)",
             "wallpadBrand": c.get("brand") or None,
             "wallpadModel": c.get("model") or None,
-            "assessment": "special_installation" if result == "SPECIAL" else "site_report",
-            "evidence": "아카라라이프 설치 완료 시스템에 등록된 RF447 연동 성공 사례." if result == "SUCCESS" else "아카라라이프 설치 완료 시스템에 등록된 특수 시공 성공 사례.",
+            "assessment": "site_report",
+            "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
             "sourceType": "아카라라이프 설치 완료 기록",
-            "apiCaseId": case_id,
+            "sourceCaseHash": case_hash,
             "publishedOn": c.get("occurredOn") or None
         }
         existing.append(record)
-        ids.add(case_id)
+        hashes.add(case_hash)
         added += 1
     if added:
         db["updated"] = datetime.date.today().isoformat()
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Public API cases: {len(cases)}, eligible COMPLETION successes: {eligible}, newly imported: {added}, missing ID/site: {missing_site}")
-    return 0
+    print(f"Approved completion successes: {eligible}; newly imported: {added}; skipped missing/unsafe site or ID: {skipped}")
+
 if __name__ == "__main__":
     try:
-        sys.exit(main())
+        main()
     except Exception as exc:
-        print(f"Sync failed safely: {type(exc).__name__}: {exc}", file=sys.stderr)
+        print(f"Sync stopped safely: {type(exc).__name__}: {exc}", file=sys.stderr)
         sys.exit(1)
