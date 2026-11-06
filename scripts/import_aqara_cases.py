@@ -8,6 +8,7 @@ import os
 import re
 import sys
 import urllib.request
+import urllib.parse
 from pathlib import Path
 
 API = "https://www.aqaralife-service.kr/api/wallpad"
@@ -25,10 +26,38 @@ def safe_apartment_name(value):
         return None
     return name
 
+def resolve_site_name(address, key):
+    """Return a unique, exact-address building name; otherwise require manual review."""
+    if not address or not key:
+        return None
+    query = urllib.parse.urlencode({
+        "confmKey": key, "currentPage": 1, "countPerPage": 5,
+        "keyword": str(address), "resultType": "json"
+    })
+    try:
+        with urllib.request.urlopen(
+            "https://business.juso.go.kr/addrlink/addrLinkApi.do?" + query, timeout=15
+        ) as response:
+            data = json.load(response)["results"]
+        if str(data["common"]["errorCode"]) != "0" or str(data["common"]["totalCount"]) != "1":
+            return None
+        item = data["juso"][0]
+        expected = re.sub(r"\\s+", "", str(address).split("(")[0])
+        returned = re.sub(r"\\s+", "", item.get("roadAddrPart1", ""))
+        if expected != returned:
+            return None
+        name = safe_apartment_name(item.get("bdNm"))
+        if not name or "," in name or "，" in name:
+            return None
+        return name
+    except (OSError, ValueError, KeyError, TypeError, IndexError):
+        return None
+
 def main():
     key = os.environ.get("AQARA_WALLPAD_API_KEY", "").strip()
     if not key:
         raise RuntimeError("Missing AQARA_WALLPAD_API_KEY GitHub secret")
+    juso_key = os.environ.get("JUSO_API_KEY", "").strip()
     req = urllib.request.Request(API, headers={
         "Authorization": "Bearer " + key, "Accept": "application/json"
     })
@@ -76,6 +105,8 @@ def main():
         order_id = c.get("installationOrderId")
         raw_id = order_id or case_id
         apt = safe_apartment_name(c.get("siteName"))
+        if not apt:
+            apt = resolve_site_name(c.get("siteAddress"), juso_key)
         if not raw_id or not apt:
             skipped += 1
             if raw_id and not apt:
