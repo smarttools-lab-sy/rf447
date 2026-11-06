@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "records": [
     {
       "brand": "코콤",
@@ -2056,6 +2056,17 @@
       "source": null,
       "sourceType": "사용자 직접 전달 설치기사 현장 연동 성공 확인",
       "verifiedOn": "2026-11-02"
+    },
+    {
+      "apartment": "대원 칸타빌",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "삼성SDS",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 시스템에 등록된 RF447 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "apiCaseId": "56feece6-5f8b-441d-bdbb-dcff3d082a97",
+      "publishedOn": "2026-11-05"
     }
   ]
 }
