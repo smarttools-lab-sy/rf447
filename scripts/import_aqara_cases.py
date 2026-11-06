@@ -44,6 +44,23 @@ def main():
     if not isinstance(cases, list):
         raise RuntimeError("API cases missing; no data imported")
 
+    # Schema diagnostics only: never log order details, addresses or field values.
+    from collections import Counter
+    from itertools import chain
+    keys = sorted({k for c in cases if isinstance(c, dict) for k in c.keys()})
+    print("API case field names: " + ", ".join(keys), flush=True)
+    source_counts = Counter(str(c.get("source", "<missing>")) for c in cases if isinstance(c, dict))
+    result_counts = Counter(str(c.get("result", "<missing>")) for c in cases if isinstance(c, dict))
+    print("Source categories: " + json.dumps(dict(sorted(source_counts.items())), ensure_ascii=False), flush=True)
+    print("Result categories: " + json.dumps(dict(sorted(result_counts.items())), ensure_ascii=False), flush=True)
+    # Display field presence counts, not private values.
+    relevant = ("status", "installationStatus", "completionStatus", "wallpad", "wallpadStatus",
+                "wallpadLinkage", "wallpadLinked", "wallpadIntegration", "linkage",
+                "linkageStatus", "isLinked", "completed", "completion")
+    present = {k: sum(k in c and c[k] is not None for c in cases if isinstance(c, dict))
+               for k in relevant if any(k in c for c in cases if isinstance(c, dict))}
+    print("Possible completion/linkage fields (presence counts): " + json.dumps(present, ensure_ascii=False), flush=True)
+
     db = json.loads(DB.read_text(encoding="utf-8"))
     existing = db.setdefault("fieldCases", [])
     # Keep compatibility with earlier imports, while using non-reversible IDs for new entries.
