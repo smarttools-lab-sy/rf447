@@ -19,6 +19,7 @@ jobs:
       - name: Import successful completion cases
         env:
           AQARA_WALLPAD_API_KEY: ${{ secrets.AQARA_WALLPAD_API_KEY }}
+          JUSO_API_KEY: ${{ secrets.JUSO_API_KEY }}
         run: python scripts/import_aqara_cases.py
       - name: Commit data changes
         run: |
