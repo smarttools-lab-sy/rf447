@@ -50,6 +50,7 @@ def main():
     prior = {str(c.get("apiCaseId")) for c in existing if c.get("apiCaseId")}
     hashes = {str(c.get("sourceCaseHash")) for c in existing if c.get("sourceCaseHash")}
     added = eligible = skipped = 0
+    needs_apartment_review = 0
     for c in cases:
         if not isinstance(c, dict) or c.get("source") != "COMPLETION" or c.get("result") != "SUCCESS":
             continue
@@ -60,6 +61,8 @@ def main():
         apt = safe_apartment_name(c.get("siteName"))
         if not raw_id or not apt:
             skipped += 1
+            if raw_id and not apt:
+                needs_apartment_review += 1
             continue
         case_hash = fingerprint(raw_id, key)
         if case_hash in hashes or (case_id is not None and str(case_id) in prior):
@@ -82,7 +85,7 @@ def main():
     if added:
         db["updated"] = datetime.date.today().isoformat()
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Approved completion successes: {eligible}; newly imported: {added}; skipped missing/unsafe site or ID: {skipped}")
+    print(f"Approved completion successes: {eligible}; newly imported: {added}; skipped missing/unsafe site or ID: {skipped}; cases requiring apartment-name review: {needs_apartment_review}")
 
 if __name__ == "__main__":
     try:
