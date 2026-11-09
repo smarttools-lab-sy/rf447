@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "records": [
     {
       "brand": "코콤",
@@ -2067,6 +2067,39 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "apiCaseId": "56feece6-5f8b-441d-bdbb-dcff3d082a97",
       "publishedOn": "2026-11-05"
+    },
+    {
+      "apartment": "신검단중앙역 센트레빌",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "코콤",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "53fbe2bac7eb6947fd1f4900c486aa2412e62ef12fd4f56f4dfc31c3d2969bc4",
+      "publishedOn": "2026-11-07"
+    },
+    {
+      "apartment": "엠코타운더프라하",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "기타/모름",
+      "wallpadModel": "EHW-1051",
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "cbf759b02b5e964e67a8cce941ee1ad81dbb7764412595f4429eabb39919f972",
+      "publishedOn": "2026-11-07"
+    },
+    {
+      "apartment": "태진아름아파트",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "f86f9602be013b50335a4b547088ddacef5de86d7e8b56fa5cd7164229f9c694",
+      "publishedOn": "2026-11-06"
     }
   ]
 }
