@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "records": [
     {
       "brand": "코콤",
@@ -4183,6 +4183,24 @@
         "sourceIds": "",
         "priorStatus": "catalog_unverified",
         "priorNote": "기사 미팅 1차 답변(2026-11-03): 모름."
+      }
+    },
+    {
+      "brand": "현대통신",
+      "model": "SEHN-2000",
+      "status": "installer_possible",
+      "note": "모델 자체를 기준으로 RF447 연동 가능성이 있다는 사용자 제공 1차 판단입니다. 실제 아파트 현장에서 RF447 연동을 완료한 사례는 아직 확인되지 않았습니다. 공식 호환 목록 등재 및 문열림 접점 방식도 별도 검증이 필요하며, 설치 전 해당 단지의 월패드 사양·배선·연동 모듈을 확인해야 합니다.",
+      "sourceType": "사용자 제공 모델 단위 1차 가능성 판단 (현장 설치 미검증)",
+      "reportedOn": "2026-11-10",
+      "assessmentReview": {
+        "reviewedOn": "2026-11-10",
+        "category": "preliminary_model_assessment",
+        "label": "모델 기준 연동 가능성 · 현장 미검증",
+        "reason": "사용자 제공 1차 판단에 따라 가능성 있는 모델로 등록. 실제 설치 완료 사례 및 공식 기술 근거는 아직 확보되지 않음.",
+        "scope": "모델 단위 참고 정보",
+        "sourceIds": "",
+        "priorStatus": "신규 등록",
+        "priorNote": ""
       }
     }
   ],
