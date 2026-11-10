@@ -4429,6 +4429,17 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "f86f9602be013b50335a4b547088ddacef5de86d7e8b56fa5cd7164229f9c694",
       "publishedOn": "2026-11-06"
+    },
+    {
+      "apartment": "삼성래미안진흥아파트",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "직방/삼성",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "683d9c275e96ca261b4dc999da0f89aa2f04139054983da9b95257398d3ceb08",
+      "publishedOn": "2026-11-10"
     }
   ]
 }
