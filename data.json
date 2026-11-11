@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "records": [
     {
       "brand": "코콤",
@@ -4439,6 +4439,17 @@
       "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "683d9c275e96ca261b4dc999da0f89aa2f04139054983da9b95257398d3ceb08",
+      "publishedOn": "2026-11-10"
+    },
+    {
+      "apartment": "센트로팰리스아파트",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "현대통신",
+      "wallpadModel": "HAS-R2071A",
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "e5ce7d2716935aa36fec5abd44675879e852076205a392a5c1e44a9d7e6615cc",
       "publishedOn": "2026-11-10"
     }
   ]
