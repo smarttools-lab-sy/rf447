@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-13",
   "records": [
     {
       "brand": "코콤",
@@ -4451,6 +4451,28 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "e5ce7d2716935aa36fec5abd44675879e852076205a392a5c1e44a9d7e6615cc",
       "publishedOn": "2026-11-10"
+    },
+    {
+      "apartment": "평택센트럴자이3단지",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": null,
+      "wallpadModel": "EHW-1051",
+      "assessment": "site_special_review",
+      "evidence": "아카라라이프 기존 수집 자료의 특수 사례. 성공 여부 및 시공 조건 확인 필요.",
+      "sourceType": "아카라라이프 기존 수집 자료",
+      "sourceCaseHash": "c6b4488e466ee59e10f72c1764d672487272b1908606d3545e8be3ed88cb1b60",
+      "publishedOn": "2026-10-29"
+    },
+    {
+      "apartment": "방배 롯데캐슬 아르떼",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "코맥스",
+      "wallpadModel": "CDP-1020PB",
+      "assessment": "site_failure",
+      "evidence": "아카라라이프 기존 수집 자료의 해당 현장 연동 실패 이력.",
+      "sourceType": "아카라라이프 기존 수집 자료",
+      "sourceCaseHash": "0ddb0394008196d0e034f3c19afaa5af19d3a83e85c73fc61455fd80877777eb",
+      "publishedOn": "2026-10-29"
     }
   ]
 }
