@@ -116,8 +116,8 @@ def main():
             if raw_id and not apt:
                 needs_apartment_review += 1
             continue
-        case_hash = fingerprint(raw_id, key)
-        if case_hash in hashes or (case_id is not None and str(case_id) in prior):
+        case_hash = fingerprint(raw_id if c["result"] == "SUCCESS" else str(raw_id) + ":" + c["result"], key)
+        if case_hash in hashes or (c["result"] == "SUCCESS" and case_id is not None and str(case_id) in prior):
             continue
         # siteAddress is used neither as a fallback nor published: it can identify a customer site.
         outcome = c["result"]
