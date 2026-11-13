@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import approved RF447 completion successes without publishing private order data."""
+"""Import apartment-level RF447 completion outcomes without publishing private order data."""
 import datetime
 import hashlib
 import hmac
@@ -96,9 +96,13 @@ def main():
     prior = {str(c.get("apiCaseId")) for c in existing if c.get("apiCaseId")}
     hashes = {str(c.get("sourceCaseHash")) for c in existing if c.get("sourceCaseHash")}
     added = eligible = skipped = 0
+    imported_results = {"SUCCESS": 0, "FAIL": 0, "SPECIAL": 0}
     needs_apartment_review = 0
     for c in cases:
-        if not isinstance(c, dict) or c.get("source") != "COMPLETION" or c.get("result") != "SUCCESS":
+        if not isinstance(c, dict) or c.get("source") != "COMPLETION" or c.get("result") not in ("SUCCESS", "FAIL", "SPECIAL"):
+            continue
+        # A non-success record is only an outcome at this site, never a model-wide verdict.
+        if c.get("result") in ("FAIL", "SPECIAL") and not c.get("siteName") and not c.get("siteAddress"):
             continue
         eligible += 1
         case_id = c.get("id")
@@ -116,13 +120,16 @@ def main():
         if case_hash in hashes or (case_id is not None and str(case_id) in prior):
             continue
         # siteAddress is used neither as a fallback nor published: it can identify a customer site.
+        outcome = c["result"]
+        assessment = {"SUCCESS": "site_report", "FAIL": "site_failure", "SPECIAL": "site_special_review"}[outcome]
+        evidence = {"SUCCESS": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.", "FAIL": "아카라라이프 설치 완료 기록의 해당 현장 연동 실패 이력.", "SPECIAL": "아카라라이프 설치 완료 기록의 특수 사례. 성공 여부 및 시공 조건 확인 필요."}[outcome]
         record = {
             "apartment": apt,
             "doorlock": "아카라 도어락 (모델 미확인)",
             "wallpadBrand": c.get("brand") or None,
             "wallpadModel": c.get("model") or None,
-            "assessment": "site_report",
-            "evidence": "아카라라이프 설치 완료 및 본사 승인 기록의 월패드 연동 성공 사례.",
+            "assessment": assessment,
+            "evidence": evidence,
             "sourceType": "아카라라이프 설치 완료 기록",
             "sourceCaseHash": case_hash,
             "publishedOn": c.get("occurredOn") or None
@@ -130,10 +137,11 @@ def main():
         existing.append(record)
         hashes.add(case_hash)
         added += 1
+        imported_results[outcome] += 1
     if added:
         db["updated"] = datetime.date.today().isoformat()
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Approved completion successes: {eligible}; newly imported: {added}; skipped missing/unsafe site or ID: {skipped}; cases requiring apartment-name review: {needs_apartment_review}")
+    print(f"Eligible completion outcomes: {eligible}; newly imported: {added}; by result: {imported_results}; skipped missing/unsafe site or ID: {skipped}; cases requiring apartment-name review: {needs_apartment_review}")
 
 if __name__ == "__main__":
     try:
