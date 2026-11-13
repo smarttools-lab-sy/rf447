@@ -99,10 +99,12 @@ def main():
     imported_results = {"SUCCESS": 0, "FAIL": 0, "SPECIAL": 0}
     needs_apartment_review = 0
     for c in cases:
-        if not isinstance(c, dict) or c.get("source") != "COMPLETION" or c.get("result") not in ("SUCCESS", "FAIL", "SPECIAL"):
+        if not isinstance(c, dict):
             continue
-        # A non-success record is only an outcome at this site, never a model-wide verdict.
-        if c.get("result") in ("FAIL", "SPECIAL") and not c.get("siteName") and not c.get("siteAddress"):
+        outcome = c.get("result")
+        origin = c.get("source")
+        # Only verified completion successes; preserve historical FAIL/SPECIAL as site-level reports.
+        if not ((origin == "COMPLETION" and outcome == "SUCCESS") or (origin in ("COMPLETION", "IMPORT") and outcome in ("FAIL", "SPECIAL"))):
             continue
         eligible += 1
         case_id = c.get("id")
@@ -120,9 +122,9 @@ def main():
         if case_hash in hashes or (c["result"] == "SUCCESS" and case_id is not None and str(case_id) in prior):
             continue
         # siteAddress is used neither as a fallback nor published: it can identify a customer site.
-        outcome = c["result"]
         assessment = {"SUCCESS": "site_report", "FAIL": "site_failure", "SPECIAL": "site_special_review"}[outcome]
-        evidence = {"SUCCESS": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.", "FAIL": "아카라라이프 설치 완료 기록의 해당 현장 연동 실패 이력.", "SPECIAL": "아카라라이프 설치 완료 기록의 특수 사례. 성공 여부 및 시공 조건 확인 필요."}[outcome]
+        source_label = "아카라라이프 설치 완료 기록" if origin == "COMPLETION" else "아카라라이프 기존 수집 자료"
+        evidence = {"SUCCESS": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.", "FAIL": source_label + "의 해당 현장 연동 실패 이력.", "SPECIAL": source_label + "의 특수 사례. 성공 여부 및 시공 조건 확인 필요."}[outcome]
         record = {
             "apartment": apt,
             "doorlock": "아카라 도어락 (모델 미확인)",
@@ -130,7 +132,7 @@ def main():
             "wallpadModel": c.get("model") or None,
             "assessment": assessment,
             "evidence": evidence,
-            "sourceType": "아카라라이프 설치 완료 기록",
+            "sourceType": source_label,
             "sourceCaseHash": case_hash,
             "publishedOn": c.get("occurredOn") or None
         }
