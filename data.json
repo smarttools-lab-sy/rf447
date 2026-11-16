@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-16",
   "records": [
     {
       "brand": "코콤",
@@ -4477,6 +4477,28 @@
       "sourceType": "아카라라이프 기존 수집 자료",
       "sourceCaseHash": "0ddb0394008196d0e034f3c19afaa5af19d3a83e85c73fc61455fd80877777eb",
       "publishedOn": "2026-10-29"
+    },
+    {
+      "apartment": "한우리아파트",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "경동나비엔",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "5527815620151e382c520873dc0108046cc8a7a419af743e23aa648fee7aa24b",
+      "publishedOn": "2026-11-14"
+    },
+    {
+      "apartment": "의왕 센트라인 데시앙",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "코콤",
+      "wallpadModel": "신형 네트워크",
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "96f65add68ce2e0eb67f52be88d2e51a0431c4cb00981383e68151dc4270091c",
+      "publishedOn": "2026-11-14"
     }
   ]
 }
