@@ -7,6 +7,8 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
 import urllib.parse
 from pathlib import Path
@@ -61,15 +63,28 @@ def main():
     req = urllib.request.Request(API, headers={
         "Authorization": "Bearer " + key, "Accept": "application/json"
     })
-    with urllib.request.urlopen(req, timeout=35) as response:
-        payload = json.load(response)
+    payload = None
+    for attempt in range(1, 4):
+        try:
+            with urllib.request.urlopen(req, timeout=35) as response:
+                payload = json.load(response)
+            break
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (408, 429, 500, 502, 503, 504) or attempt == 3:
+                raise RuntimeError(f"Backoffice API HTTP {exc.code}; attempt {attempt}/3") from None
+            print(f"Temporary API HTTP {exc.code}; retry {attempt}/3", flush=True)
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            if attempt == 3:
+                raise RuntimeError(f"Backoffice API connection failed after {attempt} attempts ({type(exc).__name__})") from None
+            print(f"Temporary API connection error; retry {attempt}/3", flush=True)
+        time.sleep(5 * attempt)
     if not isinstance(payload, dict):
         raise RuntimeError("Unexpected API response format")
     cases = payload.get("cases")
     scope = payload.get("scope")
     print(f"API scope: {scope!r}; total cases: {len(cases) if isinstance(cases, list) else 'missing'}", flush=True)
-    if scope == "public":
-        raise RuntimeError("API still returned public scope with Bearer key; no data imported. Check server authentication.")
+    if scope != "full":
+        raise RuntimeError("API did not return authenticated full scope; no data imported.")
     if not isinstance(cases, list):
         raise RuntimeError("API cases missing; no data imported")
 
@@ -151,6 +166,8 @@ def main():
         hashes.add(case_hash)
         added += 1
         imported_results[outcome] += 1
+    if skipped:
+        raise RuntimeError(f"{skipped} eligible cases have missing/unsafe identity or apartment; refusing partial DB update; review required")
     if added:
         db["updated"] = datetime.date.today().isoformat()
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
