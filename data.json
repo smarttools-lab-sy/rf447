@@ -4499,6 +4499,16 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "96f65add68ce2e0eb67f52be88d2e51a0431c4cb00981383e68151dc4270091c",
       "publishedOn": "2026-11-14"
+    },
+    {
+      "apartment": "다솜금호아파트",
+      "doorlock": "아카라 K100",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 회사 직원이 K100과 해당 아파트 월패드의 실제 연동 완료 사례를 전달함. 월패드 제조사·모델명 및 시공 조건은 미확인.",
+      "sourceType": "아카라라이프 직원 현장 연동 완료 제보",
+      "publishedOn": "2026-11-16"
     }
   ]
 }
