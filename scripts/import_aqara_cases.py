@@ -96,15 +96,23 @@ def main():
     prior = {str(c.get("apiCaseId")) for c in existing if c.get("apiCaseId")}
     hashes = {str(c.get("sourceCaseHash")) for c in existing if c.get("sourceCaseHash")}
     added = eligible = skipped = 0
+    rejected_sources = missing_id = missing_site = duplicate_count = 0
+    latest_case_date = None
     imported_results = {"SUCCESS": 0, "FAIL": 0, "SPECIAL": 0}
     needs_apartment_review = 0
     for c in cases:
         if not isinstance(c, dict):
             continue
+        date_value = c.get("occurredOn")
+        if isinstance(date_value, str) and re.match(r'^\d{4}-\d{2}-\d{2}', date_value):
+            date_part = date_value[:10]
+            if latest_case_date is None or date_part > latest_case_date:
+                latest_case_date = date_part
         outcome = c.get("result")
         origin = c.get("source")
         # Only verified completion successes; preserve historical FAIL/SPECIAL as site-level reports.
         if not ((origin == "COMPLETION" and outcome == "SUCCESS") or (origin in ("COMPLETION", "IMPORT") and outcome in ("FAIL", "SPECIAL"))):
+            rejected_sources += 1
             continue
         eligible += 1
         case_id = c.get("id")
@@ -115,11 +123,14 @@ def main():
             apt = resolve_site_name(c.get("siteAddress"), juso_key)
         if not raw_id or not apt:
             skipped += 1
+            missing_id += int(not raw_id)
+            missing_site += int(not apt)
             if raw_id and not apt:
                 needs_apartment_review += 1
             continue
         case_hash = fingerprint(raw_id if c["result"] == "SUCCESS" else str(raw_id) + ":" + c["result"], key)
         if case_hash in hashes or (c["result"] == "SUCCESS" and case_id is not None and str(case_id) in prior):
+            duplicate_count += 1
             continue
         # siteAddress is used neither as a fallback nor published: it can identify a customer site.
         assessment = {"SUCCESS": "site_report", "FAIL": "site_failure", "SPECIAL": "site_special_review"}[outcome]
@@ -144,6 +155,14 @@ def main():
         db["updated"] = datetime.date.today().isoformat()
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Eligible completion outcomes: {eligible}; newly imported: {added}; by result: {imported_results}; skipped missing/unsafe site or ID: {skipped}; cases requiring apartment-name review: {needs_apartment_review}")
+
+    print(f"Import diagnostics (counts only): excluded by source/result={rejected_sources}; duplicates={duplicate_count}; missing ID={missing_id}; missing/safety-rejected apartment={missing_site}; latest API occurredOn={latest_case_date or 'unknown'}", flush=True)
+    if missing_site or missing_id:
+        print("WARNING: Eligible Backoffice outcomes skipped due to missing identity/site information; manual review required.", flush=True)
+    if latest_case_date:
+        age = (datetime.date.today() - datetime.date.fromisoformat(latest_case_date)).days
+        if age > 2:
+            print(f"WARNING: Latest API occurredOn is {age} days old; verify API coverage against Backoffice.", flush=True)
 
 if __name__ == "__main__":
     try:
