@@ -16,9 +16,15 @@ for (const [i,r] of (db.records || []).entries()) {
 const success = new Set(['site_report','compatible','special_installation']);
 const failed = new Set(['site_failure','incompatible']);
 for (const [i,c] of (db.fieldCases || []).entries()) {
-  required(typeof c.apartment === 'string' && c.apartment.trim(), 'fieldCases['+i+'] missing apartment');
-  required(typeof c.wallpadModel === 'string' && c.wallpadModel.trim(), 'fieldCases['+i+'] missing wallpadModel');
-  required(typeof c.assessment === 'string' && c.assessment.trim(), 'fieldCases['+i+'] missing assessment');
+  // A field case can be apartment-only, model-only, or an unlocated public report.
+  // Do not invent unknown identifiers. Require evidence and source for unlocated reports.
+  const hasApartment = typeof c.apartment === 'string' && !!c.apartment.trim();
+  const hasModel = typeof c.wallpadModel === 'string' && !!c.wallpadModel.trim();
+  required(typeof c.assessment === 'string' && !!c.assessment.trim(), 'fieldCases['+i+'] missing assessment');
+  if (!hasApartment && !hasModel) {
+    required(typeof c.evidence === 'string' && !!c.evidence.trim(), 'fieldCases['+i+'] unidentified report missing evidence');
+    required(typeof c.source === 'string' && !!c.source.trim(), 'fieldCases['+i+'] unidentified report missing source');
+  }
 }
 for (const r of db.records || []) {
   if (r.status !== 'incompatible') continue;
