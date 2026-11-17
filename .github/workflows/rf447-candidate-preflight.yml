@@ -8,13 +8,14 @@ on:
       - scripts/validate-db.cjs
       - scripts/worker-verdict.cjs
       - scripts/test-worker-verdict.cjs
+      - scripts/verify-candidate-parity.cjs
       - .github/workflows/rf447-candidate-preflight.yml
 permissions:
   contents: read
 jobs:
   candidate-preflight:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,6 +25,12 @@ jobs:
         run: node scripts/validate-db.cjs
       - name: Test candidate Worker verdict rules
         run: node scripts/test-worker-verdict.cjs
+      - name: Install candidate browser test dependencies
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Compare candidate web UI with candidate Worker verdicts
+        run: node scripts/verify-candidate-parity.cjs
       - name: Confirm production snapshot exists
         run: |
           test -s published/data.json
