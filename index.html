@@ -35,8 +35,10 @@ else if(r.status==='listed_compatible'){status='RF447 호환 목록에 등록된
 if(r.assessmentReview&&r.assessmentReview.category==='technical_review'&&r.status!=='listed_compatible'){status='기술자료상 연동 검토 가능';style='caution';extra=''}
 // Three user-facing verdicts. Preserve the original granular assessment as supporting detail.
 const underlyingStatus=status;
-const isNegative=style==='danger'||(r.status==='incompatible'&&r.model!=='EHW-1051');
-const isUncertain=!isNegative&&(style==='caution'||r.status==='catalog_unverified'||r.status==='aged_site_inspection'||r.status==='conditional');
+const actualSuccess=(db.fieldCases||[]).some(c=>norm(c.wallpadModel)===norm(r.model)&&['site_report','compatible','special_installation'].includes(c.assessment));
+const originallyNegative=style==='danger'||r.status==='incompatible';
+const isNegative=originallyNegative&&!actualSuccess;
+const isUncertain=!isNegative&&(originallyNegative||style==='caution'||['catalog_unverified','aged_site_inspection','conditional'].includes(r.status));
 status=isNegative?'RF447 연동 불가':isUncertain?'RF447 연동 확인 필요':'RF447 연동 가능성 높음';
 style=isNegative?'danger':isUncertain?'caution':'';
 if(underlyingStatus!==status)extra='<p class="small"><b>세부 판정 근거:</b> '+esc(underlyingStatus)+'</p>'+extra;
