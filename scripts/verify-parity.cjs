@@ -3,16 +3,16 @@ const fs = require('node:fs');
 const http = require('node:http');
 const path = require('node:path');
 const base = path.resolve(__dirname, '..');
-const data = JSON.parse(fs.readFileSync(path.join(base, 'data.json'), 'utf8'));
+const data = JSON.parse(fs.readFileSync(path.join(base, 'published', 'data.json'), 'utf8'));
 const secret = process.env.RF447_API_KEY;
 if (!secret) { console.error('RF447_API_KEY GitHub Actions secret is missing.'); process.exit(2); }
 const norm = s => String(s || '').toUpperCase().replace(/[^A-Z0-9가-힣]/g, '');
 const delay = ms => new Promise(r => setTimeout(r, ms));
 const server = http.createServer((req, res) => {
   const p = new URL(req.url, 'http://localhost').pathname;
-  if (p !== '/' && p !== '/index.html' && p !== '/data.json') { res.writeHead(404); return res.end(); }
+  if (p !== '/' && p !== '/index.html' && p !== '/published/data.json') { res.writeHead(404); return res.end(); }
   const file = path.join(base, p === '/' ? 'index.html' : p.slice(1));
-  res.setHeader('Content-Type', p === '/data.json' ? 'application/json; charset=utf-8' : 'text/html; charset=utf-8');
+  res.setHeader('Content-Type', p === '/published/data.json' ? 'application/json; charset=utf-8' : 'text/html; charset=utf-8');
   fs.createReadStream(file).pipe(res);
 });
 const listen = () => new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
