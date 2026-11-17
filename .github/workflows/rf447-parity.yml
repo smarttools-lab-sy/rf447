@@ -29,7 +29,7 @@ jobs:
         run: sleep 330
       - name: Compare web UI with authenticated live API
         env:
-          RF447_API_KEY: \${{ secrets.RF447_API_KEY }}
+          RF447_API_KEY: ${{ secrets.RF447_API_KEY }}
         run: node scripts/verify-parity.cjs
       - name: Upload comparison report
         if: always()
