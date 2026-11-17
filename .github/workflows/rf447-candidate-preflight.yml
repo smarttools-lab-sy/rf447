@@ -1,0 +1,40 @@
+name: RF447 candidate DB preflight (safe dry run)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - data.json
+      - scripts/validate-db.cjs
+      - scripts/worker-verdict.cjs
+      - scripts/test-worker-verdict.cjs
+      - .github/workflows/rf447-candidate-preflight.yml
+permissions:
+  contents: read
+jobs:
+  candidate-preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate candidate database
+        run: node scripts/validate-db.cjs
+      - name: Test candidate Worker verdict rules
+        run: node scripts/test-worker-verdict.cjs
+      - name: Confirm production snapshot exists
+        run: |
+          test -s published/data.json
+          node -e "const d=require('./published/data.json');if(!Array.isArray(d.records)||!d.records.length)process.exit(1)"
+      - name: Compare candidate and published snapshots (report only)
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const candidate=JSON.parse(fs.readFileSync('data.json','utf8'));
+          const published=JSON.parse(fs.readFileSync('published/data.json','utf8'));
+          console.log(JSON.stringify({candidateModels:candidate.records.length,publishedModels:published.records.length,candidateCases:(candidate.fieldCases||[]).length,publishedCases:(published.fieldCases||[]).length,identical:JSON.stringify(candidate)===JSON.stringify(published)},null,2));
+          NODE
+      - name: Safety gate
+        run: echo "DRY RUN ONLY - published/data.json is never modified by this workflow."
