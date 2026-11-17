@@ -1,0 +1,40 @@
+name: RF447 Web and API parity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data.json'
+      - 'index.html'
+      - 'scripts/verify-parity.cjs'
+      - '.github/workflows/rf447-parity.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '20 0 * * *'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependency
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Allow Cloudflare API cache to refresh
+        run: sleep 330
+      - name: Compare web UI with authenticated live API
+        env:
+          RF447_API_KEY: \${{ secrets.RF447_API_KEY }}
+        run: node scripts/verify-parity.cjs
+      - name: Upload comparison report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rf447-parity-report
+          path: test-results/
+          if-no-files-found: ignore
