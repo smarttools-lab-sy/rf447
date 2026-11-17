@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "records": [
     {
       "brand": "코콤",
@@ -4509,6 +4509,28 @@
       "evidence": "아카라라이프 회사 직원이 K100과 해당 아파트 월패드의 실제 연동 완료 사례를 전달함. 월패드 제조사·모델명 및 시공 조건은 미확인.",
       "sourceType": "아카라라이프 직원 현장 연동 완료 제보",
       "publishedOn": "2026-11-16"
+    },
+    {
+      "apartment": "목동힐스테이트",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "현대통신",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "c80e78e4656107ded3f3379d755260fcd92e8f93a99630b41e2f644fad3a2afc",
+      "publishedOn": "2026-11-17"
+    },
+    {
+      "apartment": "서강스카이빌2",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "코맥스",
+      "wallpadModel": "CAV-1000YD",
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "bdec0c33a9d95b1bb2a38391b9757dfb16222c5e2d9ba387ab7d30a1bf5b125f",
+      "publishedOn": "2026-11-17"
     }
   ]
 }
