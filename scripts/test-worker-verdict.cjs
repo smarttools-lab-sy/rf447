@@ -6,7 +6,7 @@ const cases=[
   ['EHW-1051','', 'RF447 연동 확인 필요'],
   ['CDP-1020PB','방배 롯데캐슬 아르떼','RF447 연동 불가'],
   ['DMHNT-4105Y-W','자이','RF447 연동 확인 필요'],
-  ['DMHNT-4105Y-W','동탄역 경남아너스빌','RF447 연동 가능성 높음'],
+  ['DMHNT-4105Y-W','동탄역 경남아너스빌','RF447 연동 확인 필요'],
   ['HDHN-4000','송도','RF447 연동 확인 필요']
 ];
 for(const [model,apartment,expected] of cases){
