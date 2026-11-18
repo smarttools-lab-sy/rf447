@@ -29,6 +29,8 @@ jobs:
           node-version: '22'
       - name: Validate candidate database
         run: node scripts/validate-db.cjs
+      - name: Verify malformed candidate data is rejected (isolated fixtures)
+        run: node scripts/test-db-safety-negative.cjs
       - name: Test all candidate Worker verdict rules
         run: node scripts/test-worker-verdict.cjs
       - name: Install browser test dependencies
