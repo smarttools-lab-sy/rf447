@@ -10,6 +10,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Verify today's successful import
         env:
           GH_TOKEN: ${{ github.token }}
@@ -41,4 +42,19 @@ jobs:
               raise SystemExit(1)
           latest = max(successes, key=when)
           print(f"Last successful import: {latest['created_at']} UTC; run: {latest['html_url']}")
+          PY
+      - name: Verify candidate and production snapshots match
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          candidate = json.loads(pathlib.Path("data.json").read_text(encoding="utf-8"))
+          production = json.loads(pathlib.Path("published/data.json").read_text(encoding="utf-8"))
+          candidate_cases = candidate.get("fieldCases", [])
+          production_cases = production.get("fieldCases", [])
+          print(f"Candidate cases: {len(candidate_cases)}; production cases: {len(production_cases)}")
+          print(f"Candidate records: {len(candidate.get('records', []))}; production records: {len(production.get('records', []))}")
+          if candidate != production:
+              print("::error::RF447 candidate DB and published production DB differ. Automatic promotion may have failed or not run.")
+              raise SystemExit(1)
+          print("RF447 production snapshot matches candidate DB.")
           PY
