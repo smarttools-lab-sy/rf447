@@ -4531,6 +4531,17 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "bdec0c33a9d95b1bb2a38391b9757dfb16222c5e2d9ba387ab7d30a1bf5b125f",
       "publishedOn": "2026-11-17"
+    },
+    {
+      "apartment": "성복역 롯데캐슬 클라시엘",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "코콤",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "5843f44eeaef969c6a31c3c72c864cb89b3dd9f4f42aa3b420b9a696c16593fa",
+      "publishedOn": "2026-11-17"
     }
   ]
 }
