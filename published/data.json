@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-21",
   "records": [
     {
       "brand": "코콤",
@@ -4542,6 +4542,17 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "5843f44eeaef969c6a31c3c72c864cb89b3dd9f4f42aa3b420b9a696c16593fa",
       "publishedOn": "2026-11-17"
+    },
+    {
+      "apartment": "빌리브 명지 듀클래스 3단지",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "현대통신",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "d08b4b30001f3109fa7497b4391e3fdd0f8c28118595028f36a11b443a8d5add",
+      "publishedOn": "2026-11-20"
     }
   ]
 }
