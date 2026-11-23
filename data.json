@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-23",
   "records": [
     {
       "brand": "코콤",
@@ -4553,6 +4553,28 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "d08b4b30001f3109fa7497b4391e3fdd0f8c28118595028f36a11b443a8d5add",
       "publishedOn": "2026-11-20"
+    },
+    {
+      "apartment": "신봉마을 용인신봉 센트레빌 1단지",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "삼성SDS",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "a46e6a977105eb386034ba7ca253f602f701f7cc47f0e31117948633fc45b48e",
+      "publishedOn": "2026-11-23"
+    },
+    {
+      "apartment": "동탄역 시범반도유보라아이비파크 1.0",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": null,
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "8726334f5f7eddc9eb2c19813d1477dd15821efe0dbe8594edbc0b017bcd9344",
+      "publishedOn": "2026-11-21"
     }
   ]
 }
