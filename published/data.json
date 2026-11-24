@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "records": [
     {
       "brand": "코콤",
@@ -4575,6 +4575,17 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "8726334f5f7eddc9eb2c19813d1477dd15821efe0dbe8594edbc0b017bcd9344",
       "publishedOn": "2026-11-21"
+    },
+    {
+      "apartment": "서사 우미린 더 시그니처",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "현대통신",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "2db1e0b2a73d69beef4146161ef49ddaeef6d2dc4aafa29d6f9c17c58cfdfc48",
+      "publishedOn": "2026-11-23"
     }
   ]
 }
