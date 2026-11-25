@@ -3,6 +3,8 @@ const assert=require('node:assert/strict');
 const {lookup,modelVerdict}=require('./worker-verdict.cjs');
 const db=JSON.parse(fs.readFileSync('data.json','utf8'));
 const cases=[
+  ['', '방배 롯데캐슬 아르떼', 'RF447 연동 불가'],
+  ['', '엠코타운더프라하', 'RF447 연동 확인 필요'],
   ['EHW-1051','', 'RF447 연동 확인 필요'],
   ['CDP-1020PB','방배 롯데캐슬 아르떼','RF447 연동 불가'],
   ['DMHNT-4105Y-W','자이','RF447 연동 확인 필요'],
