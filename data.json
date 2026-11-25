@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "records": [
     {
       "brand": "코콤",
@@ -2905,6 +2905,25 @@
         "sourceIds": "",
         "priorStatus": "installer_possible",
         "priorNote": "기사 미팅 1차 답변(2026-11-03): 가능."
+      }
+    },
+    {
+      "brand": "직방/삼성",
+      "model": "SHT-3727EM",
+      "status": "installer_possible",
+      "note": "고객 문의에 대해 설치기사 확인 결과 RF447 연동 가능한 월패드로 판정되었습니다. 실제 설치 완료 사례는 아직 확인되지 않았으며 단지별 배선 및 사양은 현장 확인이 필요합니다.",
+      "sourceType": "고객 문의에 따른 설치기사 확인 (실제 설치 완료 사례 없음)",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-25",
+      "assessmentReview": {
+        "reviewedOn": "2026-11-25",
+        "category": "experience_report",
+        "label": "설치기사 확인 · 연동 가능",
+        "reason": "고객 문의에 대한 설치기사의 모델별 연동 가능 판정. 실제 설치 완료 근거는 미확보.",
+        "scope": "모델 단위 참고 정보",
+        "sourceIds": "",
+        "priorStatus": "installer_possible",
+        "priorNote": "2026-11-25 설치기사 확인 결과 가능."
       }
     },
     {
