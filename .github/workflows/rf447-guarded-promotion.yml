@@ -55,4 +55,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add published/data.json
           git commit -m "Promote validated RF447 database snapshot"
+          if git push origin HEAD:main; then exit 0; fi
+          # Retry only if the validated inputs are unchanged on latest main.
+          git fetch origin main
+          validated=$(git rev-parse HEAD^)
+          if ! git diff --quiet "$validated" origin/main -- . ':!published/data.json'; then
+            echo "Validated inputs changed; refusing stale promotion."
+            exit 1
+          fi
+          git rebase origin/main
           git push origin HEAD:main
