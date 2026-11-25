@@ -62,6 +62,7 @@ async function apiLookup(model, apartment) {
         document.querySelector('#search').click();
         return [...document.querySelectorAll('#results .result')].map(el => ({
           title: el.querySelector('h3')?.textContent?.trim() || '',
+          explanation: el.querySelector('.model-explanation')?.textContent?.trim() || '',
           verdict: el.querySelector('.verdict')?.textContent?.replace(/^[✓✕!\s]+/, '').trim() || ''
         })).filter(x => x.verdict);
       }, search);
@@ -80,6 +81,11 @@ async function apiLookup(model, apartment) {
         const expectedNote = record?.status === 'installer_possible' && record?.assessmentReview?.category === 'experience_report'
           ? '설치기사의 연동 가능 의견이 있습니다. 실제 설치 완료 사례와 접점 구성은 추가 확인이 필요합니다.'
           : record?.note || null;
+        // Compare directly where the web intentionally displays the standard note.
+        // Special site-dependent renderers and technical/caution blocks are separate.
+        if (record?.status === 'installer_possible' && record?.assessmentReview?.category === 'experience_report' && !record.installationCaution) {
+          if (web[0]?.explanation !== api.model?.note) errors.push('WEB_API_NOTE_MISMATCH ' + JSON.stringify({model:item.model, web:web[0]?.explanation, api:api.model?.note}));
+        }
         if (api.model?.note !== expectedNote) {
           errors.push('API_NOTE_MISMATCH ' + JSON.stringify({model:item.model, expected:expectedNote, actual:api.model?.note}));
         }
