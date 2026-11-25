@@ -27,14 +27,6 @@ async function apiLookup(model, apartment) {
     const cases = [];
     for (const r of data.records) cases.push({ kind: 'model', model: r.model, apartment: '' });
     const unique = new Set();
-    for (const c of data.fieldCases || []) {
-      if (!c.apartment || !c.wallpadModel) continue;
-      const key = norm(c.apartment) + '|' + norm(c.wallpadModel);
-      if (!unique.has(key)) {
-        unique.add(key);
-        cases.push({ kind: 'site', model: c.wallpadModel, apartment: c.apartment });
-      }
-    }
     // Include apartment-only records and verify the same apartment-only query on both sides.
     for (const c of data.fieldCases || []) {
       if (!c.apartment) continue;
@@ -44,8 +36,8 @@ async function apiLookup(model, apartment) {
         cases.push({ kind: 'apartment', model: '', apartment: c.apartment });
       }
     }
-    // Compare model-only queries directly. Site queries are checked when the browser
-    // and API both return a single unambiguous verdict for that exact site.
+    // Compare identical single-input queries supported by the web UI.
+    // Combined model/apartment API rules are covered separately by worker regression tests.
     const errors = [];
     const rows = [];
     for (const item of cases) {
@@ -60,7 +52,7 @@ async function apiLookup(model, apartment) {
         })).filter(x => x.verdict);
       }, search);
       let actual = web[0]?.verdict || '';
-      if (item.kind === 'site' || item.kind === 'apartment') {
+      if (item.kind === 'apartment') {
         const exact = web.filter(x => norm(x.title) === norm(item.apartment));
         actual = exact.length === 1 ? exact[0].verdict : '';
       }
