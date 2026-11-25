@@ -38,7 +38,15 @@ for(const record of db.records){
 for(const fieldCase of db.fieldCases||[]){
   if(!fieldCase.wallpadModel && !fieldCase.apartment) continue;
   const result=lookup(db,fieldCase.wallpadModel||'',fieldCase.apartment||'');
-  assert.equal(typeof result.found,'boolean','invalid field-case result');
+  const label = [fieldCase.wallpadModel, fieldCase.apartment].filter(Boolean).join(' / ');
+  assert.equal(result.found,true,'field-case lookup missing: '+label);
+  assert.ok(validVerdicts.has(result.verdict),'invalid field-case verdict: '+label);
+  if(fieldCase.apartment){
+    const apartmentOnly=lookup(db,'',fieldCase.apartment);
+    assert.equal(apartmentOnly.found,true,'apartment lookup missing: '+fieldCase.apartment);
+    assert.ok(validVerdicts.has(apartmentOnly.verdict),'invalid apartment verdict: '+fieldCase.apartment);
+    checked++;
+  }
   checked++;
 }
 console.log('Full candidate Worker verdict sweep passed:',checked,'model and field-case queries');
