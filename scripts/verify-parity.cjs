@@ -75,6 +75,15 @@ async function apiLookup(model, apartment) {
       try { api = await apiLookup(item.model, item.apartment); }
       catch (err) { errors.push('API_ERROR ' + JSON.stringify(item) + ' ' + err.message); continue; }
       const expected = api.verdict;
+      if (item.kind === 'model') {
+        const record = data.records.find(r => norm(r.model) === norm(item.model));
+        const expectedNote = record?.status === 'installer_possible' && record?.assessmentReview?.category === 'experience_report'
+          ? '설치기사의 연동 가능 의견이 있습니다. 실제 설치 완료 사례와 접점 구성은 추가 확인이 필요합니다.'
+          : record?.note || null;
+        if (api.model?.note !== expectedNote) {
+          errors.push('API_NOTE_MISMATCH ' + JSON.stringify({model:item.model, expected:expectedNote, actual:api.model?.note}));
+        }
+      }
       rows.push({ ...item, web: actual, api: expected });
       if (!api.found || !expected || actual !== expected) {
         errors.push('MISMATCH ' + JSON.stringify({ ...item, web: actual, api: expected, found: api.found }));
