@@ -13,6 +13,10 @@ const server = http.createServer((req, res) => {
   if (p !== '/' && p !== '/index.html' && p !== '/published/data.json') { res.writeHead(404); return res.end(); }
   const file = path.join(base, p === '/' ? 'index.html' : p.slice(1));
   res.setHeader('Content-Type', p === '/published/data.json' ? 'application/json; charset=utf-8' : 'text/html; charset=utf-8');
+  if (p === '/published/data.json') {
+    const fixture = {model:'RF447-TEST-FIXTURE-98765',brand:'TEST',status:'installer_possible',note:'검증 전용 개별 참고사항',assessmentReview:{category:'experience_report'}};
+    return res.end(JSON.stringify({...data,records:[...data.records,fixture]}));
+  }
   fs.createReadStream(file).pipe(res);
 });
 const listen = () => new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
@@ -62,6 +66,10 @@ async function apiLookup(model, apartment) {
         input.value = value;
         document.querySelector('#search').click();
         return [...document.querySelectorAll('#results .result')].map(el => ({
+          body: el.textContent || '',
+          technical: el.querySelector('.technical-evidence')?.textContent || '',
+          links: [...el.querySelectorAll('.technical-evidence a')].map(a=>a.href),
+          cautions: [...el.querySelectorAll('.installation-caution')].map(x=>x.textContent),
           title: el.querySelector('h3')?.textContent?.trim() || '',
           explanation: el.querySelector('.model-explanation')?.textContent?.trim() || '',
           verdict: el.querySelector('.verdict')?.textContent?.replace(/^[✓✕!\s]+/, '').trim() || ''
@@ -98,6 +106,43 @@ async function apiLookup(model, apartment) {
             errors.push('WEB_PRIMARY_NOTE_MISMATCH ' + JSON.stringify({model:item.model, expected:visibleExpected, actual:web[0]?.explanation}));
           }
         }
+        const compact = v => String(v || '').replace(/\s+/g,'');
+        const contains = (hay,needle) => compact(hay).includes(compact(needle));
+        const card = web[0];
+        const requireText = (hay,needle,label) => {
+          if (needle && !contains(hay,needle)) errors.push(label+' '+JSON.stringify({model:item.model,missing:needle}));
+        };
+        const t = record?.technicalEvidence;
+        if (t?.contactVerified === true) {
+          for (const key of ['contactMethod','terminals','summary','limitations']) requireText(card.technical,t[key],'TECHNICAL_MISSING');
+          for (const source of t.sources || []) if (/^https?:\/\//i.test(source.url || '') && !card.links.includes(new URL(source.url).href)) errors.push('TECHNICAL_LINK_MISSING '+item.model);
+        }
+        requireText(card.cautions.join(' '),record?.installationCaution?.note,'CAUTION_MISSING');
+        if (item.model === 'CDP-1020PB') {
+          for (const needle of ['방배 롯데캐슬 아르떼','연동 불가']) {
+            requireText(card.body,needle,'SPECIAL_WEB_MISSING');
+            requireText(api.model?.note,needle,'SPECIAL_API_MISSING');
+          }
+        }
+        if (item.model === 'EHW-1051') {
+          requireText(card.body,'일반 설치 불가','SPECIAL_WEB_MISSING');
+          requireText(api.specialInstallationWarning,'일반 설치 불가','SPECIAL_API_MISSING');
+          for (const c of data.fieldCases || []) if (norm(c.wallpadModel)==='EHW1051' && ['site_report','compatible','special_installation'].includes(c.assessment) && c.apartment) {
+            requireText(card.body,c.apartment,'SPECIAL_SITE_MISSING');
+            if (!api.fieldCases?.some(x=>norm(x.apartment)===norm(c.apartment))) errors.push('SPECIAL_API_SITE_MISSING '+c.apartment);
+          }
+        }
+        if (item.model === 'DMHNT-4105Y-W') {
+          for (const needle of ['자이','포스코']) {
+            requireText(card.body,needle,'SPECIAL_WEB_MISSING');
+            requireText(api.model?.note,needle,'SPECIAL_API_MISSING');
+          }
+          for (const report of record.siteReports || []) if(report.status==='compatible') requireText(card.body,report.site,'SPECIAL_SITE_MISSING');
+        }
+        if (record?.status === 'site_report') {
+          requireText(card.body,'현장 확인','SITE_SCOPE_MISSING');
+          requireText(card.body,record.site,'SITE_NAME_MISSING');
+        }
         if (api.model?.note !== expectedNote) {
           errors.push('API_NOTE_MISMATCH ' + JSON.stringify({model:item.model, expected:expectedNote, actual:api.model?.note}));
         }
@@ -107,6 +152,13 @@ async function apiLookup(model, apartment) {
         errors.push('MISMATCH ' + JSON.stringify({ ...item, web: actual, api: expected, found: api.found }));
       }
     }
+    const fixtureResult = await page.evaluate(() => {
+      document.querySelector('#model').value='RF447-TEST-FIXTURE-98765';
+      document.querySelector('#search').click();
+      const card=document.querySelector('#results .result');
+      return {note:card?.querySelector('.model-explanation')?.textContent?.trim(),body:card?.textContent||''};
+    });
+    if (fixtureResult.note !== '설치기사의 연동 가능 의견이 있습니다. 실제 설치 완료 사례와 접점 구성은 추가 확인이 필요합니다.' || !fixtureResult.body.includes('검증 전용 개별 참고사항')) errors.push('NEW_MODEL_STANDARDIZATION_FAILED');
     fs.mkdirSync(path.join(base, 'test-results'), { recursive: true });
     fs.writeFileSync(path.join(base, 'test-results', 'parity.json'), JSON.stringify({ checked: rows.length, errors, rows }, null, 2));
     console.log('Checked', rows.length, 'queries; mismatches/errors:', errors.length);
