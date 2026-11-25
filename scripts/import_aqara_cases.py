@@ -115,6 +115,7 @@ def main():
     latest_case_date = None
     imported_results = {"SUCCESS": 0, "FAIL": 0, "SPECIAL": 0}
     needs_apartment_review = 0
+    eligible_results = {"SUCCESS": 0, "FAIL": 0, "SPECIAL": 0}
     for c in cases:
         if not isinstance(c, dict):
             continue
@@ -130,6 +131,7 @@ def main():
             rejected_sources += 1
             continue
         eligible += 1
+        eligible_results[outcome] += 1
         case_id = c.get("id")
         order_id = c.get("installationOrderId")
         raw_id = order_id or case_id
@@ -166,6 +168,7 @@ def main():
         hashes.add(case_hash)
         added += 1
         imported_results[outcome] += 1
+    print("Eligible outcomes by result: " + json.dumps(eligible_results), flush=True)
     if skipped:
         raise RuntimeError(f"{skipped} eligible cases have missing/unsafe identity or apartment; refusing partial DB update; review required")
     if added:
