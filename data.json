@@ -4195,20 +4195,40 @@
     {
       "brand": "현대HT",
       "model": "HNF-I6103",
-      "status": "catalog_unverified",
-      "note": "공개 기술자료와 실제 연동 근거가 부족해 설치 전 확인이 필요합니다.",
-      "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
-      "installerFirstResponse": "모름",
-      "installerCheckedOn": "2026-11-03",
+      "status": "installer_possible",
+      "note": "설치기사의 연동 가능 의견이 있습니다. 실제 설치 완료 사례와 접점 구성은 추가 확인이 필요합니다.",
+      "sourceType": "사용자 제공 월패드 명판 사진 및 설치기사 연동 가능 확인",
+      "installerFirstResponse": "가능",
+      "installerCheckedOn": "2026-11-25",
       "assessmentReview": {
-        "reviewedOn": "2026-11-09",
-        "category": "needs_check",
-        "label": "확인 필요",
-        "reason": "개별 모델의 RF447 연동 가능·불가를 판단할 근거가 부족합니다.",
+        "reviewedOn": "2026-11-25",
+        "category": "experience_report",
+        "label": "설치기사 확인 · 연동 가능",
+        "reason": "설치기사 연동 가능 확인. 실제 설치 완료 여부 및 아파트명 미확인.",
         "scope": "모델 단위 참고 정보",
         "sourceIds": "S092",
         "priorStatus": "catalog_unverified",
-        "priorNote": "기사 미팅 1차 답변(2026-11-03): 모름."
+        "priorNote": "공개 기술자료와 실제 연동 근거가 부족해 설치 전 확인이 필요합니다."
+      },
+      "originalExplanation": "2026-11-25 사용자 제공 명판 사진 및 설치기사 연동 가능 확인. 실제 설치 완료 여부 및 아파트명 미확인.",
+      "previousAssessment": {
+        "brand": "현대HT",
+        "model": "HNF-I6103",
+        "status": "catalog_unverified",
+        "note": "공개 기술자료와 실제 연동 근거가 부족해 설치 전 확인이 필요합니다.",
+        "sourceType": "설치기사 1차 구두 확인 (모델별 설치 현장 미특정)",
+        "installerFirstResponse": "모름",
+        "installerCheckedOn": "2026-11-03",
+        "assessmentReview": {
+          "reviewedOn": "2026-11-09",
+          "category": "needs_check",
+          "label": "확인 필요",
+          "reason": "개별 모델의 RF447 연동 가능·불가를 판단할 근거가 부족합니다.",
+          "scope": "모델 단위 참고 정보",
+          "sourceIds": "S092",
+          "priorStatus": "catalog_unverified",
+          "priorNote": "기사 미팅 1차 답변(2026-11-03): 모름."
+        }
       }
     },
     {
@@ -4654,4 +4674,3 @@
     }
   ]
 }
-
