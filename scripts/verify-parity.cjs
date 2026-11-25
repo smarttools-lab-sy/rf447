@@ -87,6 +87,17 @@ async function apiLookup(model, apartment) {
         if (record?.status === 'installer_possible' && record?.assessmentReview?.category === 'experience_report' && !record.installationCaution) {
           if (web[0]?.explanation !== api.model?.note) errors.push('WEB_API_NOTE_MISMATCH ' + JSON.stringify({model:item.model, web:web[0]?.explanation, api:api.model?.note}));
         }
+        // For ordinary model renderers compare the visible primary explanation
+        // after removing the technical appendix and separately rendered caution.
+        const specialRenderer = ['DMHNT-4105Y-W','CDP-1020PB','EHW-1051'].includes(record?.model) || record?.status === 'site_report';
+        if (record && !specialRenderer) {
+          const normalizeText = value => String(value || '').replace(/\s+/g, ' ').trim();
+          let visibleExpected = String(expectedNote || '').split('\n기술자료:')[0];
+          if (record.installationCaution?.note) visibleExpected = visibleExpected.replace(record.installationCaution.note, '');
+          if (normalizeText(web[0]?.explanation) !== normalizeText(visibleExpected)) {
+            errors.push('WEB_PRIMARY_NOTE_MISMATCH ' + JSON.stringify({model:item.model, expected:visibleExpected, actual:web[0]?.explanation}));
+          }
+        }
         if (api.model?.note !== expectedNote) {
           errors.push('API_NOTE_MISMATCH ' + JSON.stringify({model:item.model, expected:expectedNote, actual:api.model?.note}));
         }
