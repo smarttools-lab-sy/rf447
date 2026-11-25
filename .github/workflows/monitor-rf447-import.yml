@@ -1,60 +1,82 @@
 name: Monitor RF447 import freshness
 on:
   schedule:
-    # Korea time: 09:30, 13:30, 19:30
-    - cron: '30 0,4,10 * * *'
+    - cron: '17,47 * * * *'
   workflow_dispatch:
 permissions:
-  actions: read
+  actions: write
+  contents: read
+concurrency:
+  group: rf447-import-monitor
+  cancel-in-progress: false
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - name: Verify today's successful import
+      - name: Check freshness and recover missing import
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPOSITORY: ${{ github.repository }}
         run: |
           python - <<'PY'
-          import datetime, json, os, urllib.request
+          import datetime as dt, json, os, time, urllib.request
           from zoneinfo import ZoneInfo
-          now = datetime.datetime.now(datetime.timezone.utc)
-          kst = ZoneInfo("Asia/Seoul")
-          local = now.astimezone(kst)
-          cutoff = local.replace(hour=8, minute=0, second=0, microsecond=0).astimezone(datetime.timezone.utc)
           repo = os.environ["GH_REPOSITORY"]
-          url = f"https://api.github.com/repos/{repo}/actions/workflows/import-aqara-cases.yml/runs?per_page=50"
-          req = urllib.request.Request(url, headers={
-              "Authorization": "Bearer " + os.environ["GH_TOKEN"],
-              "Accept": "application/vnd.github+json",
-              "X-GitHub-Api-Version": "2022-11-28"
-          })
-          with urllib.request.urlopen(req, timeout=30) as response:
-              runs = json.load(response).get("workflow_runs", [])
-          def when(run):
-              return datetime.datetime.fromisoformat(run["created_at"].replace("Z", "+00:00"))
-          recent = [r for r in runs if when(r) >= cutoff and r.get("event") in ("schedule", "workflow_dispatch")]
-          successes = [r for r in recent if r.get("conclusion") == "success"]
-          print(f"KST check: {local.isoformat(timespec='minutes')}; import runs since 08:00 KST: {len(recent)}; successes: {len(successes)}")
-          if not successes:
-              print("::error::No successful RF447 import workflow run since 08:00 KST. Check scheduled runs, API connectivity and import logs.")
-              raise SystemExit(1)
-          latest = max(successes, key=when)
-          print(f"Last successful import: {latest['created_at']} UTC; run: {latest['html_url']}")
+          base = f"https://api.github.com/repos/{repo}/actions/workflows/import-aqara-cases.yml"
+          headers = {"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+          def request(url, data=None):
+              req = urllib.request.Request(url, headers=headers, data=data)
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  return json.load(response) if data is None else None
+          def runs():
+              return request(base + "/runs?per_page=50")["workflow_runs"]
+          def stamp(r):
+              return dt.datetime.fromisoformat(r["created_at"].replace("Z", "+00:00"))
+          now = dt.datetime.now(dt.timezone.utc)
+          local = now.astimezone(ZoneInfo("Asia/Seoul"))
+          # Allow 45 minutes for each scheduled slot; overnight use previous evening.
+          slots = [local.replace(hour=h, minute=m, second=0, microsecond=0) for h,m in [(8,0),(8,30),(9,0),(12,0),(18,0)]]
+          slots += [slots[-1] - dt.timedelta(days=1)]
+          due = max(s for s in slots if s + dt.timedelta(minutes=45) <= local)
+          cutoff = due.astimezone(dt.timezone.utc)
+          def good(items):
+              return any(stamp(r) >= cutoff and r.get("conclusion") == "success" for r in items)
+          def active(items):
+              return any(r.get("status") != "completed" for r in items)
+          items = runs()
+          print(f"KST check: {local.isoformat()}; required slot: {due.isoformat()}")
+          if not good(items):
+              if not active(items):
+                  request(base + "/dispatches", json.dumps({"ref":"main"}).encode())
+                  print("Recovery import dispatched")
+              else:
+                  print("Import already active; waiting")
+              for _ in range(36):
+                  time.sleep(15)
+                  if good(runs()):
+                      break
+              else:
+                  raise SystemExit("No successful import after recovery wait; investigate Actions/API")
+          print("Fresh import verified")
           PY
-      - name: Verify candidate and production snapshots match
+      - name: Verify current candidate and production snapshots
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
         run: |
           python - <<'PY'
-          import json, pathlib
-          candidate = json.loads(pathlib.Path("data.json").read_text(encoding="utf-8"))
-          production = json.loads(pathlib.Path("published/data.json").read_text(encoding="utf-8"))
-          candidate_cases = candidate.get("fieldCases", [])
-          production_cases = production.get("fieldCases", [])
-          print(f"Candidate cases: {len(candidate_cases)}; production cases: {len(production_cases)}")
-          print(f"Candidate records: {len(candidate.get('records', []))}; production records: {len(production.get('records', []))}")
-          if candidate != production:
-              print("::error::RF447 candidate DB and published production DB differ. Automatic promotion may have failed or not run.")
-              raise SystemExit(1)
-          print("RF447 production snapshot matches candidate DB.")
+          import json, os, time, urllib.request
+          base = "https://api.github.com/repos/" + os.environ["GH_REPOSITORY"] + "/contents/"
+          headers = {"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"}
+          def sha(path):
+              with urllib.request.urlopen(urllib.request.Request(base + path + "?ref=main", headers=headers), timeout=30) as r:
+                  return json.load(r)["sha"]
+          for _ in range(12):
+              if sha("data.json") == sha("published/data.json"):
+                  print("RF447 production snapshot matches candidate DB.")
+                  break
+              time.sleep(15)
+          else:
+              raise SystemExit("Candidate and production differ after promotion wait")
           PY
