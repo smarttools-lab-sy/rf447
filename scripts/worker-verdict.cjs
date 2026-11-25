@@ -91,7 +91,9 @@ function apartmentVerdict(cases, isXi) {
   const successes = cases.filter(c => SUCCESS.has(c.assessment));
   const uncertainty = cases.some(c => ['site_special_review','special_installation','compatible_reported'].includes(c.assessment));
   if (failures.length && successes.length) return {verdict:'RF447 연동 확인 필요',reason:'성공 및 실패 기록이 함께 있어 현장 확인이 필요합니다.'};
+  if (!isXi && !successes.length && failures.some(c => c.assessment === 'incompatible' && norm(c.wallpadModel) === 'CDP1020PB' && norm(c.apartment) === '방배롯데캐슬아르떼')) return {verdict:'RF447 연동 불가',reason:'방배 롯데캐슬 아르떼 전용 CDP-1020PB 사양의 RF447 연동 불가 기록이 확인되었습니다. 다른 아파트의 동일 모델에 적용되는 판정은 아닙니다.'};
   if (failures.length && !isXi) return {verdict:'RF447 연동 확인 필요',reason:'해당 아파트의 연동 실패·불가 이력이 확인됩니다.'};
+  if (successes.length && !uncertainty && successes.some(c => norm(c.wallpadModel) === 'EHW1051')) return {verdict:'RF447 연동 확인 필요',reason:'EHW-1051은 일반 설치 불가 안내 모델입니다. 해당 아파트의 연동 완료 기록은 확인되지만 시공 조건 및 일반 설치 가능 여부는 현장 확인이 필요합니다.'};
   if (successes.length && !uncertainty) return {verdict:'RF447 연동 가능성 높음',reason:'해당 아파트의 연동 성공 기록이 있습니다.'};
   return {verdict:'RF447 연동 확인 필요',reason:'해당 아파트의 연동 조건 및 설치 가능 여부는 현장 확인이 필요합니다.'};
 }
