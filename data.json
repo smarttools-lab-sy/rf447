@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "records": [
     {
       "brand": "코콤",
@@ -4671,6 +4671,17 @@
       "sourceType": "아카라라이프 설치 완료 기록",
       "sourceCaseHash": "2db1e0b2a73d69beef4146161ef49ddaeef6d2dc4aafa29d6f9c17c58cfdfc48",
       "publishedOn": "2026-11-23"
+    },
+    {
+      "apartment": "성복역롯데캐슬골드타운",
+      "doorlock": "아카라 도어락 (모델 미확인)",
+      "wallpadBrand": "코맥스",
+      "wallpadModel": null,
+      "assessment": "site_report",
+      "evidence": "아카라라이프 설치 완료 기록의 월패드 연동 성공 사례.",
+      "sourceType": "아카라라이프 설치 완료 기록",
+      "sourceCaseHash": "3e62862fd18a926c55482c70b1547a587d52525a22b889e2e7ee87308ca36363",
+      "publishedOn": "2026-11-26"
     }
   ]
 }
